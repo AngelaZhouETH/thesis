@@ -1,0 +1,34 @@
+\begin{thebibliography}{1}
+
+\bibitem{brachmann2017dsac}
+Eric Brachmann, Alexander Krull, Sebastian Nowozin, Jamie Shotton, Frank
+  Michel, Stefan Gumhold, and Carsten Rother.
+\newblock Dsac-differentiable ransac for camera localization.
+\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}, pages 6684--6692, 2017.
+
+\bibitem{lepetit2009epnp}
+Vincent Lepetit, Francesc Moreno-Noguer, and Pascal Fua.
+\newblock Epnp: An accurate o (n) solution to the pnp problem.
+\newblock {\em International journal of computer vision}, 81(2):155, 2009.
+
+\bibitem{tekin2018real}
+Bugra Tekin, Sudipta~N Sinha, and Pascal Fua.
+\newblock Real-time seamless single shot 6d object pose prediction.
+\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}, pages 292--301, 2018.
+
+\bibitem{wu2017delving}
+Jian Wu, Liwei Ma, and Xiaolin Hu.
+\newblock Delving deeper into convolutional neural networks for camera
+  relocalization.
+\newblock In {\em 2017 IEEE International Conference on Robotics and Automation
+  (ICRA)}, pages 5644--5651. IEEE, 2017.
+
+\bibitem{wu2018image}
+Yihong Wu, Fulin Tang, and Heping Li.
+\newblock Image-based camera localization: an overview.
+\newblock {\em Visual Computing for Industry, Biomedicine, and Art},
+  1(1):1--13, 2018.
+
+\end{thebibliography}

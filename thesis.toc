@@ -18,10 +18,26 @@
 \contentsline {section}{\numberline {3.3}Choice of `fonts'}{13}{section.3.3}
 \contentsline {section}{\numberline {3.4}Displayed equations}{13}{section.3.4}
 \contentsline {section}{\numberline {3.5}Floats}{14}{section.3.5}
-\contentsline {chapter}{\chapternumberline {4}Example Chapter}{17}{chapter.4}
-\contentsline {section}{\numberline {4.1}Example Section}{17}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Example Subsection}{17}{subsection.4.1.1}
-\contentsline {subsubsection}{Example Subsubsection}{17}{section*.2}
-\contentsline {paragraph}{Example Paragraph}{17}{section*.3}
-\contentsline {subparagraph}{Example Subparagraph}{17}{section*.4}
-\contentsline {appendix}{\chapternumberline {A}Dummy Appendix}{19}{appendix.A}
+\contentsline {chapter}{\chapternumberline {4}Introduction}{17}{chapter.4}
+\contentsline {section}{\numberline {4.1}Motivation}{18}{section.4.1}
+\contentsline {section}{\numberline {4.2}Background}{18}{section.4.2}
+\contentsline {section}{\numberline {4.3}Focus of this work}{18}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Example Subsection}{18}{subsection.4.3.1}
+\contentsline {subsubsection}{Example Subsubsection}{18}{section*.2}
+\contentsline {paragraph}{Example Paragraph}{18}{section*.3}
+\contentsline {subparagraph}{Example Subparagraph}{18}{section*.4}
+\contentsline {chapter}{\chapternumberline {5}Example Chapter}{19}{chapter.5}
+\contentsline {section}{\numberline {5.1}Example Section}{19}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Example Subsection}{19}{subsection.5.1.1}
+\contentsline {subsubsection}{Example Subsubsection}{19}{section*.5}
+\contentsline {paragraph}{Example Paragraph}{19}{section*.6}
+\contentsline {subparagraph}{Example Subparagraph}{19}{section*.7}
+\contentsline {chapter}{\chapternumberline {6}Dataset}{21}{chapter.6}
+\contentsline {section}{\numberline {6.1}Dataset types}{21}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Synthetic data}{21}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Realistic data}{21}{subsection.6.1.2}
+\contentsline {subsubsection}{Scannet}{21}{section*.8}
+\contentsline {paragraph}{Example Paragraph}{21}{section*.9}
+\contentsline {subparagraph}{Example Subparagraph}{21}{section*.10}
+\contentsline {appendix}{\chapternumberline {A}Dummy Appendix}{23}{appendix.A}
+\contentsline {chapter}{Bibliography}{25}{appendix*.11}
