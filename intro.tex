@@ -1,6 +1,6 @@
 \chapter{Introduction}
 
-In recent years, image-based camera localization has been a key task in the areas of augmented reality, virtual reality, robotics, autonomous driving, etc. In this thesis, we focus on camera localization from RGB images and aim for real-time, efficient, and robust camera localization.
+In recent years, image-based camera localization has been a key task in the areas of augmented reality, virtual reality, robotics, autonomous driving, etc. There are many methods relying on RGB-D cameras which are quite robust and accurate. However, the RGB-D cameras are power consuming, which makes approaches based on mobile and wearable cameras more attractive. In this thesis, we focus on camera localization from RGB images and aim for real-time, efficient, and robust camera localization.
 
 Traditionally, the PnP algorithm \cite{lepetit2009epnp} is used to solve the camera localization problem by computing the 6D camera pose given the 2D and 3D corresponding coordinates of multiple points. The fundamental problems of traditional approaches relying on local image features are textureless environments and robustness against strong changes in illumination/occlusion/viewpoint/etc. between the localized image and the given 3D model. To address these limitations, recently, deep learning has been applied to predict the 2D and 3D coordinates of these control points \cite{brachmann2017dsac} and has achieved superior results. However, these approaches are typically very time-consuming to train and evaluate. In this thesis, we want to combine the benefits of both worlds and develop a learned approach that is efficient and robust.
 
@@ -11,24 +11,44 @@ The major challenges of the project include limited data for training the locali
 
 \section{Motivation}
 
-Image-based camera localization is to compute camera poses under some world coordinate system from images or video captured by the cameras. \cite{wu2018image} In recent years, image-based camera localization has great and wide applications in multiple areas. Autonomous localization and navigation is needed for a moving robot
-Augment reality on images: camera pose or localization
-View virtual environment: corresponding viewing angle should be computed
-Ubiquitous
-Relocalization
-Real time
+In recent years, image-based camera localization has great and wide applications in multiple areas. Autonomous localization and navigation is necessary for a moving robot. Augment reality on images requires camera pose or localization. To view virtual environment, corresponding viewing angle needs to be computed.
+
+Furthermore, unlike some other technics that require special devices, e.g. Lidar sensors, RGB-D cameras, etc, cameras are ubiquitous nowadays and people carry with their mobile phones that have cameras every day. Thus, we want to utilize only RGB images from 2D cameras to realize image-based camera localization.
+
+As the current approaches are time-consuming \cite{brachmann2017dsac} or can not be generalized to new scenes \cite{wu2017delving}, we aim to come up with an efficient, real-time, and robust camera localization approach.
 
 
 \section{Background}
 
-There are many localization tools nowadays, among which GPS is very commonly used outdoors, but it cannot be used indoors. Lidar, UWB, WiFi AP et al are effective indoor localization tools. However, they require special devices or data collection in advance. There are also many methods replying on RGB-D cameras which are quite robust and accurate
-Compared to other localization tools, camera localization is the most flexible and low cost one. 
+\subsection{Overview on localization tools}
 
-Currently, there are many effective and robust methods relying on depth information acquired by RGB-D cameras. However, the RGB-D cameras are power consuming and not ubiquitous as 2D cameras. Thus, in this work we focus on RGB images that could be acquired by 2D cameras, and do not rely on depth information.
+There are many localization tools nowadays, among which GPS is very commonly used outdoors, but it cannot be used indoors. Lidar, UWB, WiFi AP et al are effective indoor localization tools. However, they require special devices or data collections in advance. Compared to these tools, camera photos can provide higher discriminated features and more information, but in the same time require higher computation ability.
+
+There are also many effective and robust methods relying on depth information acquired by RGB-D cameras currently. However, the RGB-D cameras are power consuming and not ubiquitous as 2D cameras. Thus, passive RGB images that are more commonly used and easy to be acquired by mobile devices and wearable cameras become more attractive. In this work we focus on RGB images that could be captured by 2D cameras, and do not rely on depth information. Compared to other localization tools, image-based camera localization is the most flexible and low cost one.
+
+\subsection{Image-based camera localization}
+
+Image-based camera localization \cite{wu2018image} is to compute camera poses under some world coordinate system from images or video captured by the cameras. Image-based camera localization can be classified into two categories according to that environments are prior or not: the one with known environments and the other one with unknown environments. Then one with known environments are usually the PnP problem studies, and the one with unknown environments consists of the methods with online and real-time environment mapping and the methods without online and real-time environment mapping. The former is commonly known as Simultaneous Localization and Mapping (SLAM) and the latter is the middle procedure of the commonly known structure from motion (SFM). In this thesis, we are not doing any mapping or reconstruction for unknown environments since we are aiming for real-time localization given only single image as input.
+
+There are also some approaches using convolutional neural network to predict camera pose directly from the 2D images without using PnP algorithm. \cite{wu2017delving} predicts the orientation and translation of a camera given only a single picture. However, this approach is solving camera relocalization problem, and it can only predict in the same scene that the training period learnt. While this approach is useful in many robotic applications such as navigation and Simultaneous Localization and Mapping (SLAM), it cannot be generalised to a camera localization problem in a new/unseen scene. Thus, we are still applying PnP algorithm based on corresponding 2D and 3D points to calculate the camera pose.
+
+Recently, a real-time single shot 6D object pose estimation approach \cite{tekin2018real} has been proposed. 6D object pose estimation is related with camera pose estimation which let us see a possibility of realizing real-time camera localization task in a general scene. \cite{tekin2018real} is using a single-shot deep convolutional neural network to predict the 2D projections of the object's 3D bounding boxes, and then use a PnP algorithm to compute 6D object pose. We adapt this approach for our camera localization task. Namely, we use a PnP algorithm to calculate the camera pose from the 2D coordinates predicted by the network and the corresponding 3D keypoints of some known 3D models.
+
+\subsection{PnP algorithm}
+
+Camera pose determinations from known 3D space points are called perspective-n-point problem, namely PnP problem. Let n be the number of used points. When $n \geq 6$, the problem is linear. When $n = 3,4,5$, the problem is nonlinear. And when $n < 3$, there is no solution. Although the P3P problem has been well solved, but there may exist multiple solutions. In this work, we set the number of keypoints per object as 9. Although there may sometimes be outliers due to occlusion or other reasons, we can still guarantee it is a linear problem at most of the cases.
+
+When the PnP problem is linear, there are also a lot of works studying on efficient optimizations for the camera poses from small number of points. \cite{lepetit2009epnp} provide an accurate O(n) solution to the PnP problem, called EPnP which is widely used today. In our approach, we will also utilize EPnP as a baseline method.
+
+\subsection{6D object pose estimation}
+
+
 
 \section{Focus of this work}
 
-\subsection{Example Subsection}
+that is to use a single-shot CNN architecture for finding corresponding 2D and 3D points in the environments and apply a PnP algorithm to calculate the camera pose.
+
+
 
 Dummy text.
 

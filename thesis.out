@@ -19,14 +19,17 @@
 \BOOKMARK [0][-]{chapter.4}{Introduction}{}% 19
 \BOOKMARK [1][-]{section.4.1}{Motivation}{chapter.4}% 20
 \BOOKMARK [1][-]{section.4.2}{Background}{chapter.4}% 21
-\BOOKMARK [1][-]{section.4.3}{Focus of this work}{chapter.4}% 22
-\BOOKMARK [2][-]{subsection.4.3.1}{Example Subsection}{section.4.3}% 23
-\BOOKMARK [0][-]{chapter.5}{Example Chapter}{}% 24
-\BOOKMARK [1][-]{section.5.1}{Example Section}{chapter.5}% 25
-\BOOKMARK [2][-]{subsection.5.1.1}{Example Subsection}{section.5.1}% 26
-\BOOKMARK [0][-]{chapter.6}{Dataset}{}% 27
-\BOOKMARK [1][-]{section.6.1}{Dataset types}{chapter.6}% 28
-\BOOKMARK [2][-]{subsection.6.1.1}{Synthetic data}{section.6.1}% 29
-\BOOKMARK [2][-]{subsection.6.1.2}{Realistic data}{section.6.1}% 30
-\BOOKMARK [0][-]{appendix.A}{Dummy Appendix}{}% 31
-\BOOKMARK [0][-]{appendix*.11}{Bibliography}{}% 32
+\BOOKMARK [2][-]{subsection.4.2.1}{Overview on localization tools}{section.4.2}% 22
+\BOOKMARK [2][-]{subsection.4.2.2}{Image-based camera localization}{section.4.2}% 23
+\BOOKMARK [2][-]{subsection.4.2.3}{PnP algorithm}{section.4.2}% 24
+\BOOKMARK [2][-]{subsection.4.2.4}{6D object pose estimation}{section.4.2}% 25
+\BOOKMARK [1][-]{section.4.3}{Focus of this work}{chapter.4}% 26
+\BOOKMARK [0][-]{chapter.5}{Example Chapter}{}% 27
+\BOOKMARK [1][-]{section.5.1}{Example Section}{chapter.5}% 28
+\BOOKMARK [2][-]{subsection.5.1.1}{Example Subsection}{section.5.1}% 29
+\BOOKMARK [0][-]{chapter.6}{Dataset}{}% 30
+\BOOKMARK [1][-]{section.6.1}{Dataset types}{chapter.6}% 31
+\BOOKMARK [2][-]{subsection.6.1.1}{Synthetic data}{section.6.1}% 32
+\BOOKMARK [2][-]{subsection.6.1.2}{Realistic data}{section.6.1}% 33
+\BOOKMARK [0][-]{appendix.A}{Dummy Appendix}{}% 34
+\BOOKMARK [0][-]{appendix*.11}{Bibliography}{}% 35
