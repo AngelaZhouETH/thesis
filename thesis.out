@@ -26,14 +26,15 @@
 \BOOKMARK [2][-]{subsection.4.2.5}{Constraints on image-based camera localization problem}{section.4.2}% 26
 \BOOKMARK [1][-]{section.4.3}{Focus of this work}{chapter.4}% 27
 \BOOKMARK [0][-]{chapter.5}{Related works}{}% 28
-\BOOKMARK [1][-]{section.5.1}{Example Section}{chapter.5}% 29
-\BOOKMARK [2][-]{subsection.5.1.1}{Example Subsection}{section.5.1}% 30
-\BOOKMARK [0][-]{chapter.6}{Example Chapter}{}% 31
-\BOOKMARK [1][-]{section.6.1}{Example Section}{chapter.6}% 32
-\BOOKMARK [2][-]{subsection.6.1.1}{Example Subsection}{section.6.1}% 33
-\BOOKMARK [0][-]{chapter.7}{Dataset}{}% 34
-\BOOKMARK [1][-]{section.7.1}{Dataset types}{chapter.7}% 35
-\BOOKMARK [2][-]{subsection.7.1.1}{Synthetic data}{section.7.1}% 36
-\BOOKMARK [2][-]{subsection.7.1.2}{Realistic data}{section.7.1}% 37
-\BOOKMARK [0][-]{appendix.A}{Dummy Appendix}{}% 38
-\BOOKMARK [0][-]{appendix*.11}{Bibliography}{}% 39
+\BOOKMARK [1][-]{section.5.1}{Classical methods}{chapter.5}% 29
+\BOOKMARK [1][-]{section.5.2}{RGB-D methods}{chapter.5}% 30
+\BOOKMARK [1][-]{section.5.3}{CNN-based methods}{chapter.5}% 31
+\BOOKMARK [2][-]{subsection.5.3.1}{Camera relocalization}{section.5.3}% 32
+\BOOKMARK [2][-]{subsection.5.3.2}{Object detection}{section.5.3}% 33
+\BOOKMARK [2][-]{subsection.5.3.3}{6D object pose detection}{section.5.3}% 34
+\BOOKMARK [0][-]{chapter.6}{Dataset}{}% 35
+\BOOKMARK [1][-]{section.6.1}{Dataset types}{chapter.6}% 36
+\BOOKMARK [2][-]{subsection.6.1.1}{Synthetic data}{section.6.1}% 37
+\BOOKMARK [2][-]{subsection.6.1.2}{Realistic data}{section.6.1}% 38
+\BOOKMARK [0][-]{appendix.A}{Dummy Appendix}{}% 39
+\BOOKMARK [0][-]{appendix*.11}{Bibliography}{}% 40

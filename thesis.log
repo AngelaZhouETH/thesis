@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.13)  8 SEP 2019 11:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.13)  8 SEP 2019 21:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1200,7 +1200,7 @@ LaTeX Info: Redefining \nameref on input line 88.
 \openout4 = `thesis.out'.
 
 LaTeX Info: Redefining \Ref on input line 88.
-<ETHlogo.pdf, id=144, 179.67125pt x 45.16875pt>
+<ETHlogo.pdf, id=160, 179.67125pt x 45.16875pt>
 File: ETHlogo.pdf Graphic file (type pdf)
 <use ETHlogo.pdf>
 Package pdftex.def Info: ETHlogo.pdf  used on input line 98.
@@ -1318,7 +1318,11 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
  [14]) (./intro.tex [15] [16
 
 ] [17] [18]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Warning: Citation `kehl2017ssd' on page 19 undefined on input line 33.
+
+
+Underfull \vbox (badness 5105) has occurred while \output is active []
 
  [19]
 Overfull \hbox (17.69783pt too wide) in paragraph at lines 41--42
@@ -1327,42 +1331,53 @@ Overfull \hbox (17.69783pt too wide) in paragraph at lines 41--42
  []
 
 
+LaTeX Warning: Citation `rad2017bb8' on page 20 undefined on input line 49.
+
+
+LaTeX Warning: Citation `kehl2017ssd' on page 20 undefined on input line 49.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [20])
 (./related_works.tex [21] [22
 
-]) (./sections.tex [23] [24
+] [23]
 
-]) (./dataset.tex
-[25] [26
+LaTeX Warning: Citation `rad2017bb8' on page 24 undefined on input line 40.
+
+
+LaTeX Warning: Citation `kehl2017ssd' on page 24 undefined on input line 43.
+
+) (./dataset.tex [24] [25] [26
 
 ]) (./appendix.tex [27] [28
 
 ]) [29] [30
 
-] (./thesis.bbl
+]
+(./thesis.bbl
 bibitemlist
 )
-<declaration-originality.pdf, id=440, 597.55246pt x 845.07718pt>
+<declaration-originality.pdf, id=461, 597.55246pt x 845.07718pt>
 File: declaration-originality.pdf Graphic file (type pdf)
 <use declaration-originality.pdf>
-Package pdftex.def Info: declaration-originality.pdf  used on input line 127.
+Package pdftex.def Info: declaration-originality.pdf  used on input line 126.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: declaration-originality.pdf Graphic file (type pdf)
 <use declaration-originality.pdf>
-Package pdftex.def Info: declaration-originality.pdf  used on input line 127.
+Package pdftex.def Info: declaration-originality.pdf  used on input line 126.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
-<declaration-originality.pdf, id=443, page=1, 597.55246pt x 845.07718pt>
+<declaration-originality.pdf, id=464, page=1, 597.55246pt x 845.07718pt>
 File: declaration-originality.pdf Graphic file (type pdf)
 <use declaration-originality.pdf, page 1>
 Package pdftex.def Info: declaration-originality.pdf , page1 used on input line
- 127.
+ 126.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: declaration-originality.pdf Graphic file (type pdf)
 <use declaration-originality.pdf, page 1>
 Package pdftex.def Info: declaration-originality.pdf , page1 used on input line
- 127.
+ 126.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
  [31
 
@@ -1370,17 +1385,17 @@ Package pdftex.def Info: declaration-originality.pdf , page1 used on input line
 File: declaration-originality.pdf Graphic file (type pdf)
 <use declaration-originality.pdf, page 1>
 Package pdftex.def Info: declaration-originality.pdf , page1 used on input line
- 127.
+ 126.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
 File: declaration-originality.pdf Graphic file (type pdf)
 <use declaration-originality.pdf, page 1>
 Package pdftex.def Info: declaration-originality.pdf , page1 used on input line
- 127.
+ 126.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
 File: declaration-originality.pdf Graphic file (type pdf)
 <use declaration-originality.pdf, page 1>
 Package pdftex.def Info: declaration-originality.pdf , page1 used on input line
- 127.
+ 126.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
  [32 <./declaration-originality.pdf>]
 \tf@thm=\write5
@@ -1389,11 +1404,11 @@ Package pdftex.def Info: declaration-originality.pdf , page1 used on input line
 \tf@toc=\write6
 \openout6 = `thesis.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 129.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 129.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 128.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 128.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 129.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 129.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 128.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 128.
 
 
 Package rerunfilecheck Warning: File `thesis.out' has changed.
@@ -1401,8 +1416,8 @@ Package rerunfilecheck Warning: File `thesis.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: B667792DDEE6769C404ACCA4C02F95B4;2196
-(rerunfilecheck)             After:  44E9E6D8966F919E0BBFCF328EDEAFC3;2487.
+(rerunfilecheck)             Before: 44E9E6D8966F919E0BBFCF328EDEAFC3;2487
+(rerunfilecheck)             After:  0AC618E567527CF291836E9537A86A48;2579.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1411,15 +1426,27 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 16702 strings out of 492649
- 236982 string characters out of 6129621
+ 16706 strings out of 492649
+ 237050 string characters out of 6129621
  409360 words of memory out of 5000000
- 20094 multiletter control sequences out of 15000+600000
+ 20096 multiletter control sequences out of 15000+600000
  40340 words of font info for 115 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,18n,122p,1026b,1878s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{subsection.6.1.2} has been referenced but does no
+ 62i,18n,122p,1046b,1878s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{subsection.7.1.2} has been referenced but does no
 t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.7.1.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.7.1} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.7} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.1.1} has been referenced but does not 
+exist, replaced by a fixed one
 
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
 live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texl
@@ -1439,10 +1466,10 @@ fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2018/texmf-d
 ist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2018/texmf-dist/fon
 ts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type
 1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (38 pages, 378120 bytes).
+Output written on thesis.pdf (38 pages, 383356 bytes).
 PDF statistics:
- 582 PDF objects out of 1000 (max. 8388607)
- 505 compressed objects within 6 object streams
- 140 named destinations out of 1000 (max. 500000)
- 12594 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 605 PDF objects out of 1000 (max. 8388607)
+ 528 compressed objects within 6 object streams
+ 145 named destinations out of 1000 (max. 500000)
+ 12626 words of extra memory for PDF output out of 14400 (max. 10000000)
 

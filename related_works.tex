@@ -1,31 +1,44 @@
 \chapter{Related works}
 
-Dummy text.
+In this chapter we review the existing works on camera localization from classical feature and template matching methods to newer end-to-end trainable CNN-based methods. Since we use 6D object pose estimation to realize our camera localization, object detection and 6D pose estimation related works are also reviewed.
 
 \section{Classical methods}
 
-Dummy text.
+Traditional RGB object instance recognition and pose estimation works are mainly local feature extraction and mapping.
 
 \section{RGB-D methods}
 
 
 \section{CNN-based methods}
 
+\subsection{Camera relocalization}
+
+\subsection{Object detection}
+
+\paragraph{R-CNN and further methods}
+propose various locations and regions 
+
+\paragraph{SSD}
+
+\paragraph{YOLO}
+YOLO is a single shot object detection approach and is proposed in the same time as SSD. Most of the works for object detection before YOLO have a first step to propose possible regions of the object, and then do the classification and refinement. The multiple stages make the model hard to optimize since each component must be trained separately. The post-processing step also makes the training and prediction rather slow.
+
+YOLO change the network from doing classification to regression for object detection. Instead of doing classification on a proposed region, YOLO can predict the location of the bounding boxes of the object directly. Given a full image, YOLO use a single network to predict all bounding boxes across all classes for the image simultaneously in one evaluation. Thus, YOLO realizes a single shot, end-to-end trainable network for object detection task.
+
+Although YOLO cannot achieve the state-of-the-art accuracy but it is extremely fast and capable for real-time object detection. Compared with other real-time systems, it has more than twice of the mean precision. Although YOLO has lower recall compared to region proposal-based methods, it has less than half false positives on background errors compared to Fast R-CNN.
+
+There are some constraints of YOLO as well. The first one is that there is a limit on the number of nearby objects that the model can predict. Since YOLO partition the image into multiple grid, and each grid cell can only predict one class, although it can predict B bounding boxes per grid, there is still only one object predicted as output. If two objects are very close and have their center in the same grid, only one of them can be predicted. The second one is that YOLO does not achieve the state-of-art accuracy. There is significant number of localization errors and relatively low recall of YOLO compared to region proposal-based methods.
+
+\paragraph{YOLO v2}
+YOLO v2 has done some improvements to the YOLO detection method. Inspired by Faster R-CNN, which use the region proposal network(RPN) to predict offsets and confidences for anchor boxes, YOLO v2 removed the fully connected layer at the end of the network, and instead use anchor boxes to predict bounding boxes. YOLO v2 decouples the class prediction mechanism from the spatial location and instead predict class for every anchor box. In this way, the limitation of only one class is predicted per grid cell is released, and now we can better predict nearby objects.
 
 
 
-\subsection{Example Subsection}
+\subsection{6D object pose detection}
 
-Dummy text.
+\paragraph{BB8}
+BB8 \cite{rad2017bb8} is a 6D object detection approach which consists of one CNN to realize a coarse segmentation and another to predict the 2D locations of the projections of the object’s 3D bounding box, which are then used by a PnP algorithm to compute the 6D object pose. The segmentation stage generates a 2D segmentation mask for presenting a cropped image to the second network. There is also an optional additional step that refines the predicted poses. The method is slow due to its multi-stage nature.
 
-\subsubsection{Example Subsubsection}
-
-Dummy text.
-
-\paragraph{Example Paragraph}
-
-Dummy text.
-
-\subparagraph{Example Subparagraph}
-
-Dummy text.
+\paragraph{SSD-6D}
+The SSD-6D \cite{kehl2017ssd} approach relies on the SSD architecture to predict object's 2D bounding boxes and a pool of the most likely 6D poses for that instance. It then predicts the approximated depth of the object from the size of the 2D bounding box in the image and lift the output from 2D to 6D object pose. In the final step, the approach refine each pose in every
+pool and select the best after verification. As the method require a refinement step to get a good accuracy, the running time is increased linearly with the number of objects being detected.
