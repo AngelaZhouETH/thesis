@@ -1,64 +1,115 @@
+% Some commands used in this file
+\newcommand{\package}{\emph}
+
 \chapter{Introduction}
 
-In recent years, image-based camera localization has been a key task in the areas of augmented reality, virtual reality, robotics, autonomous driving, etc. There are many methods relying on RGB-D cameras which are quite robust and accurate. However, the RGB-D cameras are power consuming, which makes approaches based on mobile and wearable cameras more attractive. In this thesis, we focus on camera localization from RGB images and aim for real-time, efficient, and robust camera localization.
+This is version \verb-v1.4- of the template.
 
-Traditionally, the PnP \cite{lepetit2009epnp} algorithm is used to solve the camera localization problem by computing the 6D camera pose given the 2D and 3D corresponding coordinates of multiple points. The fundamental problems of traditional approaches relying on local image features are textureless environments and robustness against strong changes in illumination/occlusion/viewpoint/etc. between the localized image and the given 3D model. To address these limitations, recently, deep learning has been applied to predict the 2D and 3D coordinates of these control points \cite{brachmann2017dsac} and has achieved superior results. However, these approaches are typically very time-consuming to train and evaluate. In this thesis, we want to combine the benefits of both worlds and develop a learned approach that is efficient and robust.
+We assume that you found this template on our institute's website, so
+we do not repeat everything stated there.  Consult the website again
+for pointers to further reading about \LaTeX{}.  This chapter only
+gives a brief overview of the files you are looking at.
 
-The problem of 6D object pose estimation from RGB images is related to the problem of camera localization. Recently, an efficient, single shot approach \cite{tekin2018real} for simultaneously detecting an object in an RGB image and predicting its 6D pose without requiring multiple stages has been proposed. This approach resulted in an improvement over the state-of-the-art in terms of accuracy and efficiency, and addressed the challenges on keypoint occlusion and multiple object pose estimation. In this project, we aim to adapt this approach for efficient image-based camera localization. To this end, we will define keypoints on the 3D room layout for indoor environments and predict the projections of these 3D keypoints. The 6D pose will then be computed using PnP \cite{lepetit2009epnp} based on the correspondences between 2D predictions and 3D reference keypoints.
+\section{Features}
+\label{sec:features}
 
-The major challenges of the project include limited data for training the localization task, occlusion, and motion. To address these issues, one initial idea is to increase the number of keypoints without slowing down the method, which is a direction to go for higher accuracy and robustness. \cite{brachmann2017dsac} provided a trainable RANSAC approach for larger set of control points and can be integrated with the current model. Cutting edge methods could also be learned and utilized to achieve a higher performance.
+The rest of this document shows off a few features of the template
+files.  Look at the source code to see which macros we used!
 
-
-\section{Motivation}
-
-In recent years, image-based camera localization has great and wide applications in multiple areas. Autonomous localization and navigation is necessary for a moving robot. Augment reality on images requires camera pose or localization. To view virtual environment, corresponding viewing angle needs to be computed.
-
-Furthermore, unlike some other technics that require special devices, e.g. Lidar sensors, RGB-D cameras, etc, cameras are ubiquitous nowadays and people carry with their mobile phones that have cameras every day. Thus, we want to utilize only RGB images from 2D cameras to realize image-based camera localization.
-
-As the current approaches are time-consuming \cite{brachmann2017dsac} or can not be generalized to new scenes \cite{wu2017delving}, we aim to come up with an efficient, real-time, and robust camera localization approach.
-
-
-\section{Background}
-
-\subsection{Overview on localization tools}
-
-There are many localization tools nowadays, among which GPS is very commonly used outdoors, but it cannot be used indoors. Lidar, UWB, WiFi AP et al are effective indoor localization tools. However, they require special devices or data collections in advance. Compared to these tools, camera photos can provide higher discriminated features and more information, but in the same time require higher computation ability.
-
-There are also many effective and robust methods relying on depth information acquired by RGB-D cameras currently. However, the RGB-D cameras are power consuming and not ubiquitous as 2D cameras. Thus, passive RGB images that are more commonly used and easy to be acquired by mobile devices and wearable cameras become more attractive. In this work we focus on RGB images that could be captured by 2D cameras, and do not rely on depth information. Compared to other localization tools, image-based camera localization is the most flexible and low cost one.
-
-\subsection{Image-based camera localization}
-
-Image-based camera localization \cite{wu2018image} is to compute camera poses under some world coordinate system from images or video captured by the cameras. Image-based camera localization can be classified into two categories according to that environments are prior or not: the one with known environments and the other one with unknown environments. Then one with known environments are usually the PnP problem studies, and the one with unknown environments consists of the methods with online and real-time environment mapping and the methods without online and real-time environment mapping. The former is commonly known as Simultaneous Localization and Mapping (SLAM) and the latter is the middle procedure of the commonly known structure from motion (SFM). In this thesis, we are not doing any mapping or reconstruction for unknown environments since we are aiming for real-time localization given only single image as input.
-
-There are also some approaches using convolutional neural network to predict camera pose directly from the 2D images or to compute 6D pose in some other way without using PnP algorithm. \cite{wu2017delving} predicts the orientation and translation of a camera given only a single picture. However, this approach is solving camera relocalization problem, and it can only predict in the same scene that the training period learnt. While this approach is useful in many robotic applications such as navigation and Simultaneous Localization and Mapping (SLAM), it cannot be generalised to a camera localization problem in a new/unseen scene. SSD-6D \cite{kehl2017ssd} relies on SSD architecture to predict 2D bounding boxes and a rough orientation estimate. Then based on the size of the 2D bounding box, it estimates the depth of the object and lift the 2D detection to 6D. However, the refinement step of this approach increases the running time a lot that cannot make a real-time prediction feasible.
-
-Recently, a real-time single shot 6D object pose estimation approach \cite{tekin2018real} has been proposed. 6D object pose estimation is related with camera pose estimation which let us see a possibility of realizing real-time camera localization task in a general scene. \cite{tekin2018real} is using a single shot deep convolutional neural network to predict the 2D projections of the object's 3D bounding boxes, and then use a PnP algorithm to compute 6D object pose. We adapt this approach for our camera localization task. Namely, we use a PnP algorithm to calculate the camera pose from the 2D coordinates predicted by the network and the corresponding 3D keypoints of some known 3D models.
-
-\subsection{PnP algorithm}
-
-As we are applying PnP algorithm to calculate the camera pose according to some corresponding 2D and 3D points. Here is a introduction to PnP algorithm.
-
-Camera pose determinations from known 3D space points are called perspective-n-point problem, namely PnP problem. Let n be the number of used points. When $n \geq 6$, the problem is linear. When $n = 3,4,5$, the problem is nonlinear. And when $n < 3$, there is no solution. Although the P3P problem has been well solved, but there may exist multiple solutions. In this work, we set the number of keypoints per object as 9. Although there may sometimes be outliers due to occlusion or other reasons, we can still guarantee it is a linear problem at most of the cases.
-
-When the PnP problem is linear, there are also a lot of works studying on efficient optimizations for the camera poses from small number of points. \cite{lepetit2009epnp} provide an accurate O(n) solution to the PnP problem, called EPnP which is widely used today. In our approach, we also utilize EPnP and compare it with other PnP solutions.
-
-\subsection{6D object pose estimation}
-
-There are also lots of current works on 6D object pose estimation. Traditional approaches are mainly local image features extraction and matching. There are many fast keypoint and edge-based methods for textured objects, but not effective to weakly textured or untextured objects, or low resolution video streams.
-
-Recently, deep learning methods are utilized in solving 6D object pose estimation problem and have achieved outstanding performance. BB8 \cite{rad2017bb8} is a 6D object detection pipeline made of one CNN to coarsely segment the object and another to predict the 2D locations of the projections of the object's 3D bounding box given the segmentation. It then use PnP algorithm to compute 6D pose using the corresponding points. The method is effective but slow due to its multi-stage nature. SSD-6D \cite{kehl2017ssd} is another approach which relies on SSD architecture to predict 2D bounding boxes and a very rough estimate of the object's orientation in a single step. Then the object's depth is approximated from the size of the 2D bounding box in the image and the 2D detection is lifted to 6D. However, both BB8 and SSD-6D methods require a post-processing step to refine the result, which increase the running time linearly and make the methods not feasible for real-time tasks.
-
-\subsection{Constraints on image-based camera localization problem}
-
-The common problem for camera localization or object pose detection is that the datasets available are rather limited, compared to datasets for other tasks like classification or tagging. Specifically, the most common datasets for detection contain thousands to hundreds of thousands of images with dozens to hundreds of tags, while classification datasets have millions of images with tens or hundreds of thousands of categories. Labeling images for detection is far more expensive than labeling for classification or tagging where tags are often user-supplied for free. These result in object detection problem lack of enough datasets and labels.
-
-In this work, we generate the 2D projections of object's 3D bounding boxes for multiple objects as labels for indoor environments. We take Scannet dataset as the realistic dataset and SunCG together with six tools for synthetic dataset. The labels generated can also be used in future works on related topics.
+The template is divided into \TeX{} files as follows:
+\begin{enumerate}
+\item \texttt{thesis.tex} is the main file.
+\item \texttt{extrapackages.tex} holds extra package includes.
+\item \texttt{layoutsetup.tex} defines the style used in this document.
+\item \texttt{theoremsetup.tex} declares the theorem-like environments.
+\item \texttt{macrosetup.tex} defines extra macros that you may find
+  useful.
+\item \texttt{introduction.tex} contains this text.
+\item \texttt{sections.tex} is a quick demo of each sectioning level
+  available.
+\item \texttt{refs.bib} is an example bibliography file.  You can use
+  Bib\TeX{} to quote references.  For example, read
+  \cite{bringhurst1996ets} if you can get a hold of it\cite{wu2017delving}.
+\end{enumerate}
 
 
-\section{Focus of this work}
+\subsection{Extra package includes}
 
-As clarified in the previous background section, we are aiming for a real-time and robust image-based camera localization approach that can predict the camera pose in a new scene. The new scene could be in similar environment as the training scenes, e.g. indoor environment with furnitures, but they should not be the same scenes. The approach should also be able to generalise to various object with no need of precise and detailed texture.
+The file \texttt{extrapackages.tex} lists some packages that usually
+come in handy.  Simply have a look at the source code.  We have
+added the following comments based on our experiences:
+\begin{description}
+\item[REC] This package is recommended.
+\item[OPT] This package is optional.  It usually solves a specific
+  problem in a clever way.
+\item[ADV] This package is for the advanced user, but solves a problem
+  frequent enough that we mention it. Consult the package's
+  documentation.
+\end{description}
 
-We adapt the recent real-time single shot 6D object pose prediction approach \cite{tekin2018real} to our camera localization approach. We also generate new labels for indoor environment dataset. Basically, the approach uses a single shot deep CNN architecture to find the corresponding 2D image coordinates of the 3D ground keypoints for some known 3D models in the environments and then applies a PnP algorithm to calculate the camera pose. We choose the 3D keypoints as the 8 corners of the object's 3D bounding box plus the center point of the object. The network is single shot and end-to-end trainable, and the model is also accurate without requiring any post-processing, so it is faster than the other current existing methods which are multi-stage or require post-processing for pose refinement. 
+As a small example, here is a reference to the Section \emph{Features}
+typeset with the recommended \package{varioref} package:
+\begin{quote}
+  See Section~\vref{sec:features}.
+\end{quote}
 
 
+\subsection{Layout setup}
+
+This defines the overall look of the document -- for example, it
+changes the chapter and section heading appearance.  We consider this
+a `do not touch' area.  Take a look at the excellent \emph{Memoir}
+documentation before changing it.
+
+In fact, take a look at the excellent \emph{Memoir} documentation,
+full stop.
+
+
+\subsection{Theorem setup}
+
+This file defines a bunch of theorem-like environments.
+
+\begin{theorem}
+  An example theorem.
+\end{theorem}
+
+\begin{proof}
+  Proof text goes here.
+\end{proof}
+
+Note that the q.e.d.\ symbol moves to the correct place automatically
+if you end the proof with an \texttt{enumerate} or
+\texttt{displaymath}.  You do not need to use \verb-\qedhere- as with
+\package{amsthm}.
+
+\begin{theorem}[Some Famous Guy]
+  Another example theorem.
+\end{theorem}
+
+\begin{proof}
+  This proof
+  \begin{enumerate}
+  \item ends in an enumerate.
+  \end{enumerate}
+\end{proof}
+
+\begin{proposition}
+  Note that all theorem-like environments are by default numbered on
+  the same counter.
+\end{proposition}
+
+\begin{proof}
+  This proof ends in a display like so:
+  \begin{displaymath}
+    f(x) = x^2.
+  \end{displaymath}
+\end{proof}
+
+
+\subsection{Macro setup}
+
+For now the macro setup only shows how to define some basic macros,
+and how to use a neat feature of the \package{mathtools} package:
+\begin{displaymath}
+  \abs{a}, \quad \abs*{\frac{a}{b}}, \quad \abs[\big]{\frac{a}{b}}.
+\end{displaymath}

@@ -1,10 +1,23 @@
-\chapter{Example Chapter}
+\chapter{Methodology}
 
-Dummy text.
+This work is following B. Tekin's real-time single shot 6D object pose detection method \cite{tekin2018real} which is inspired by the performance of YOLO and YOLO v2 on single shot 2D object detection. The network architecture is based on YOLO v2  but extends 2D detection to 6D detection task. The output of the network is the 2D coordinates of the projections of the 3D keypoints of the object. The approach then applies a PnP algorithm to compute the camera pose according to the corresponding 2D and 3D points.
 
-\section{Example Section}
+In this section, we first review the network architecture of YOLO and YOLO v2 in details, and then elaborate our improvements on it for a camera localization problem.
 
-Dummy text.
+\section{YOLO and YOLO v2}
+
+YOLO \cite{redmon2016you} is a single shot object detection approach which first frames object detection as a regression problem to spatially separated bounding boxes and associated class probabilities, instead of the prior repurposing to classification works.
+
+YOLO uses a single neural network to predict bounding boxes and class probabilities directly from full images in one evaluation. Given an input image, the system divides the image into an $S \times S$ grid. The grid that the center of an object falls into is responsible for detecting that object. Each grid cell predicts B bounding boxes and confidence scores for those boxes. The confidence score reflects how confident the model is that the box contains an object and also how accurate it thinks the box that it predicts is. YOLO takes the intersection over union (IOU) as the measurements for the confidence score. Formally, the confidence is defined as $Pr(Object) * IOU_{pred}^{truth}$. That is, if no object exists in the cell, the confidence is 0. Otherwise the confidence score equals the intersection over union (IOU) between the predicted box and the ground truth.
+
+
+
+\section{Model}
+\section{Training}
+\section{Prediction}
+
+
+
 
 \subsection{Example Subsection}
 

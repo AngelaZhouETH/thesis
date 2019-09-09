@@ -1,40 +1,35 @@
 \BOOKMARK [0][-]{section*.1}{Contents}{}% 1
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 2
-\BOOKMARK [1][-]{section.1.1}{Features}{chapter.1}% 3
-\BOOKMARK [2][-]{subsection.1.1.1}{Extra package includes}{section.1.1}% 4
-\BOOKMARK [2][-]{subsection.1.1.2}{Layout setup}{section.1.1}% 5
-\BOOKMARK [2][-]{subsection.1.1.3}{Theorem setup}{section.1.1}% 6
-\BOOKMARK [2][-]{subsection.1.1.4}{Macro setup}{section.1.1}% 7
-\BOOKMARK [0][-]{chapter.2}{Writing scientific texts in English}{}% 8
-\BOOKMARK [1][-]{section.2.1}{Basic writing rules}{chapter.2}% 9
-\BOOKMARK [1][-]{section.2.2}{Being nice to the reader}{chapter.2}% 10
-\BOOKMARK [1][-]{section.2.3}{A few important grammar rules}{chapter.2}% 11
-\BOOKMARK [1][-]{section.2.4}{Things you \(usually\) don't say in English}{chapter.2}% 12
-\BOOKMARK [0][-]{chapter.3}{Typography}{}% 13
-\BOOKMARK [1][-]{section.3.1}{Punctuation}{chapter.3}% 14
-\BOOKMARK [1][-]{section.3.2}{Spacing}{chapter.3}% 15
-\BOOKMARK [1][-]{section.3.3}{Choice of `fonts'}{chapter.3}% 16
-\BOOKMARK [1][-]{section.3.4}{Displayed equations}{chapter.3}% 17
-\BOOKMARK [1][-]{section.3.5}{Floats}{chapter.3}% 18
-\BOOKMARK [0][-]{chapter.4}{Introduction}{}% 19
-\BOOKMARK [1][-]{section.4.1}{Motivation}{chapter.4}% 20
-\BOOKMARK [1][-]{section.4.2}{Background}{chapter.4}% 21
-\BOOKMARK [2][-]{subsection.4.2.1}{Overview on localization tools}{section.4.2}% 22
-\BOOKMARK [2][-]{subsection.4.2.2}{Image-based camera localization}{section.4.2}% 23
-\BOOKMARK [2][-]{subsection.4.2.3}{PnP algorithm}{section.4.2}% 24
-\BOOKMARK [2][-]{subsection.4.2.4}{6D object pose estimation}{section.4.2}% 25
-\BOOKMARK [2][-]{subsection.4.2.5}{Constraints on image-based camera localization problem}{section.4.2}% 26
-\BOOKMARK [1][-]{section.4.3}{Focus of this work}{chapter.4}% 27
-\BOOKMARK [0][-]{chapter.5}{Related works}{}% 28
-\BOOKMARK [1][-]{section.5.1}{Classical methods}{chapter.5}% 29
-\BOOKMARK [1][-]{section.5.2}{RGB-D methods}{chapter.5}% 30
-\BOOKMARK [1][-]{section.5.3}{CNN-based methods}{chapter.5}% 31
-\BOOKMARK [2][-]{subsection.5.3.1}{Camera relocalization}{section.5.3}% 32
-\BOOKMARK [2][-]{subsection.5.3.2}{Object detection}{section.5.3}% 33
-\BOOKMARK [2][-]{subsection.5.3.3}{6D object pose detection}{section.5.3}% 34
-\BOOKMARK [0][-]{chapter.6}{Dataset}{}% 35
-\BOOKMARK [1][-]{section.6.1}{Dataset types}{chapter.6}% 36
-\BOOKMARK [2][-]{subsection.6.1.1}{Synthetic data}{section.6.1}% 37
-\BOOKMARK [2][-]{subsection.6.1.2}{Realistic data}{section.6.1}% 38
-\BOOKMARK [0][-]{appendix.A}{Dummy Appendix}{}% 39
-\BOOKMARK [0][-]{appendix*.11}{Bibliography}{}% 40
+\BOOKMARK [1][-]{section.1.1}{Motivation}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.2}{Background}{chapter.1}% 4
+\BOOKMARK [2][-]{subsection.1.2.1}{Overview on localization tools}{section.1.2}% 5
+\BOOKMARK [2][-]{subsection.1.2.2}{Image-based camera localization}{section.1.2}% 6
+\BOOKMARK [2][-]{subsection.1.2.3}{PnP algorithm}{section.1.2}% 7
+\BOOKMARK [2][-]{subsection.1.2.4}{6D object pose estimation}{section.1.2}% 8
+\BOOKMARK [2][-]{subsection.1.2.5}{Constraints on image-based camera localization problem}{section.1.2}% 9
+\BOOKMARK [1][-]{section.1.3}{Focus of this work}{chapter.1}% 10
+\BOOKMARK [0][-]{chapter.2}{Related Work}{}% 11
+\BOOKMARK [1][-]{section.2.1}{Classical methods}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.2}{RGB-D methods}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.3}{CNN-based methods}{chapter.2}% 14
+\BOOKMARK [2][-]{subsection.2.3.1}{Camera relocalization}{section.2.3}% 15
+\BOOKMARK [2][-]{subsection.2.3.2}{Object detection}{section.2.3}% 16
+\BOOKMARK [2][-]{subsection.2.3.3}{6D object pose detection}{section.2.3}% 17
+\BOOKMARK [0][-]{chapter.3}{Methodology}{}% 18
+\BOOKMARK [1][-]{section.3.1}{YOLO and YOLO v2}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.2}{Model}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.3}{Training}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.4}{Prediction}{chapter.3}% 22
+\BOOKMARK [2][-]{subsection.3.4.1}{Example Subsection}{section.3.4}% 23
+\BOOKMARK [0][-]{chapter.4}{Datasets}{}% 24
+\BOOKMARK [1][-]{section.4.1}{Dataset types}{chapter.4}% 25
+\BOOKMARK [2][-]{subsection.4.1.1}{Synthetic data}{section.4.1}% 26
+\BOOKMARK [2][-]{subsection.4.1.2}{Realistic data}{section.4.1}% 27
+\BOOKMARK [0][-]{chapter.5}{Experiments and Results}{}% 28
+\BOOKMARK [1][-]{section.5.1}{Example Section}{chapter.5}% 29
+\BOOKMARK [2][-]{subsection.5.1.1}{Example Subsection}{section.5.1}% 30
+\BOOKMARK [0][-]{chapter.6}{Constraints and Future Work}{}% 31
+\BOOKMARK [1][-]{section.6.1}{Example Section}{chapter.6}% 32
+\BOOKMARK [2][-]{subsection.6.1.1}{Example Subsection}{section.6.1}% 33
+\BOOKMARK [0][-]{appendix.A}{Dummy Appendix}{}% 34
+\BOOKMARK [0][-]{appendix*.21}{Bibliography}{}% 35
