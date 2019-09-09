@@ -6,11 +6,25 @@ In this section, we first review the network architecture of YOLO and YOLO v2 in
 
 \section{YOLO and YOLO v2}
 
+\subsection{YOLO}
 YOLO \cite{redmon2016you} is a single shot object detection approach which first frames object detection as a regression problem to spatially separated bounding boxes and associated class probabilities, instead of the prior repurposing to classification works.
 
-YOLO uses a single neural network to predict bounding boxes and class probabilities directly from full images in one evaluation. Given an input image, the system divides the image into an $S \times S$ grid. The grid that the center of an object falls into is responsible for detecting that object. Each grid cell predicts B bounding boxes and confidence scores for those boxes. The confidence score reflects how confident the model is that the box contains an object and also how accurate it thinks the box that it predicts is. YOLO takes the intersection over union (IOU) as the measurements for the confidence score. Formally, the confidence is defined as $Pr(Object) * IOU_{pred}^{truth}$. That is, if no object exists in the cell, the confidence is 0. Otherwise the confidence score equals the intersection over union (IOU) between the predicted box and the ground truth.
+YOLO uses a single neural network to predict bounding boxes and class probabilities directly from full images in one evaluation. Given an input image, the system divides the image into an $S \times S$ grid. The grid that the center of an object falls into is responsible for detecting that object. Each grid cell predicts B bounding boxes and confidence scores for those boxes. The confidence score reflects how confident the model is that the box contains an object and also how accurate it thinks the box that it predicts is. YOLO takes the intersection over union (IOU) as the measurements for the confidence score. Formally, the confidence is defined as $Pr(Object) * IOU_{pred}^{truth}$. That is, if no object exists in the cell, the confidence is 0. Otherwise the confidence score equals the intersection over union (IOU) between the predicted box and the ground truth. Each grid cell also predicts C conditional class probabilities, $Pr(Class_{i}|Object)$. These probabilities are conditioned on the grid cell containing an object. There is only one set of class probabilities predicted per grid cell, regardless the number of bounding boxes B is predicted per cell. Thus, only one object is detected per grid cell. This limits YOLO from detecting nearby objects that have their centers in the same cell.
+
+Each bounding box consists of 5 predictions, where 4 of them represents the coordinates of the center of the box and the width and height of the box, and plus a confidence prediction. Thus, the output of the network is a $S \times S \times (B * 5 + C)$ tensor, where B is the number of bounding boxes predicted per grid cell and C is number of classes.
+
+\paragraph{Network}
+YOLO consists of 24 convolutional layers to extract features from the image and 2 fully connected layers to predict the output class probabilities and bounding box coordinates. it also designed a pretrain network which consists 20 convolutional layers, an average-pooling layer and a fully connected layer for pretraining the network.
+
+\paragraph{Training}
 
 
+
+
+\paragraph{Inference}
+At test time, the conditional class probabilities is multiplied with the individual box confidence predictions, which results in class-specific confidence.
+
+\subsection{YOLO v2}
 
 \section{Model}
 \section{Training}

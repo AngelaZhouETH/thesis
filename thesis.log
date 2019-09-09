@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.13)  9 SEP 2019 12:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.13)  9 SEP 2019 13:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1296,16 +1296,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Warning: Citation `redmon2016you' on page 11 undefined on input line 9.
 
-
-Underfull \vbox (badness 4341) has occurred while \output is active []
-
- [11])
-(./datasets.tex [12]) (./experiments.tex [13
+[11]) (./datasets.tex [12]) (./experiments.tex [13
 
 ] [14
 
-]) (./futurework.tex [15]
-[16
+]) (./futurework.tex
+[15] [16
 
 ]) (./appendix.tex [17] [18
 
@@ -1378,7 +1374,7 @@ Here is how much of TeX's memory you used:
  18902 multiletter control sequences out of 15000+600000
  34362 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,18n,122p,1052b,538s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,18n,122p,1206b,538s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
 xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
@@ -1391,7 +1387,7 @@ e/2018/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2018/t
 exmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2018/texmf-di
 st/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2018/texmf-dist/font
 s/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (28 pages, 304747 bytes).
+Output written on thesis.pdf (28 pages, 305519 bytes).
 PDF statistics:
  461 PDF objects out of 1000 (max. 8388607)
  401 compressed objects within 5 object streams
