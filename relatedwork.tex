@@ -2,16 +2,17 @@
 
 In this chapter we review the existing works on camera localization from classical feature and template matching methods to newer end-to-end trainable CNN-based methods. Since we use 6D object pose estimation to realize our camera localization, object detection and 6D pose estimation related works are also reviewed.
 
-\section{Classical methods}
+\section{Camera localization methods}
+
+\subsection{Classical methods}
 
 Traditional RGB object instance recognition and pose estimation works are mainly local feature extraction and mapping.
 
-\section{RGB-D methods}
+\subsection{CNN-based methods}
+There are some CNN-based end-to-end camera pose prediction methods.
 
-
-\section{CNN-based methods}
-
-\subsection{Camera relocalization}
+\section{Object detection based methods}
+Camera localization can also be computed from 6D object pose. 6D object pose detection approaches are mostly based on object detection means. Here we review related works from the initial R-CNN based object detection methods to the latest single shot 6D object pose detection method.
 
 \subsection{Object detection}
 
@@ -41,8 +42,7 @@ YOLO v2 achieves a good tradeoff between speed and accuracy. It outperforms Fast
 BB8 \cite{rad2017bb8} is a 6D object detection approach which consists of one CNN to realize a coarse segmentation and another to predict the 2D locations of the projections of the object’s 3D bounding box, which are then used by a PnP algorithm to compute the 6D object pose. The segmentation stage generates a 2D segmentation mask for presenting a cropped image to the second network. There is also an optional additional step that refines the predicted poses. The method is slow due to its multi-stage nature.
 
 \paragraph{SSD-6D}
-The SSD-6D \cite{kehl2017ssd} approach relies on the SSD architecture to predict object's 2D bounding boxes and a pool of the most likely 6D poses for that instance. It then predicts the approximated depth of the object from the size of the 2D bounding box in the image and lift the output from 2D to 6D object pose. In the final step, the approach refine each pose in every
-pool and select the best after verification. As the method require a refinement step to get a good accuracy, the running time is increased linearly with the number of objects being detected.
+The SSD-6D \cite{kehl2017ssd} approach relies on the SSD architecture to predict object's 2D bounding boxes and a pool of the most likely 6D poses for that instance. It then predicts the approximated depth of the object from the size of the 2D bounding box in the image and lift the output from 2D to 6D object pose. In the final step, the approach refine each pose in every pool and select the best after verification. As the method require a refinement step to get a good accuracy, the running time is increased linearly with the number of objects being detected.
 
 \paragraph{Real-time single shot approach}
 

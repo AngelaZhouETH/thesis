@@ -1,12 +1,13 @@
 \chapter{Methodology}
 
-This work is following B. Tekin's real-time single shot 6D object pose detection method \cite{tekin2018real} which is inspired by the performance of YOLO and YOLO v2 on single shot 2D object detection. The network architecture is based on YOLO v2  but extends 2D detection to 6D detection task. The output of the network is the 2D coordinates of the projections of the 3D keypoints of the object. The approach then applies a PnP algorithm to compute the camera pose according to the corresponding 2D and 3D points.
+This work is following B. Tekin's real-time single shot 6D object pose detection method \cite{tekin2018real} which is inspired by the performance of YOLO \cite{redmon2016you} and YOLO v2 on single shot 2D object detection. The network architecture is based on YOLO v2  but extends 2D detection to 6D detection task. The output of the network is the 2D coordinates of the projections of the 3D keypoints of the object. The approach then applies a PnP algorithm to compute the camera pose according to the corresponding 2D and 3D points.
 
-In this section, we first review the network architecture of YOLO and YOLO v2 in details, and then elaborate our improvements on it for a camera localization problem.
+In this section, we first review the network architecture of some single shot object detection methods, we take YOLO and YOLO v2  for examples, and then elaborate our improvements on it for a camera localization problem.
 
-\section{YOLO and YOLO v2}
+\section{Single shot object detection}
 
-\subsection{YOLO}
+The network architecture of our work is based on YOLO v2 but is amenable to other single shot detectors such as SSD and its variants. In this section we briefly introduce the network architecture of YOLO and YOLO v2.
+
 YOLO \cite{redmon2016you} is a single shot object detection approach which first frames object detection as a regression problem to spatially separated bounding boxes and associated class probabilities, instead of the prior repurposing to classification works.
 
 YOLO uses a single neural network to predict bounding boxes and class probabilities directly from full images in one evaluation. Given an input image, the system divides the image into an $S \times S$ grid. The grid that the center of an object falls into is responsible for detecting that object. Each grid cell predicts B bounding boxes and confidence scores for those boxes. The confidence score reflects how confident the model is that the box contains an object and also how accurate it thinks the box that it predicts is. YOLO takes the intersection over union (IOU) as the measurements for the confidence score. Formally, the confidence is defined as $Pr(Object) * IOU_{pred}^{truth}$. That is, if no object exists in the cell, the confidence is 0. Otherwise the confidence score equals the intersection over union (IOU) between the predicted box and the ground truth. Each grid cell also predicts C conditional class probabilities, $Pr(Class_{i}|Object)$. These probabilities are conditioned on the grid cell containing an object. There is only one set of class probabilities predicted per grid cell, regardless the number of bounding boxes B is predicted per cell. Thus, only one object is detected per grid cell. This limits YOLO from detecting nearby objects that have their centers in the same cell.
@@ -18,13 +19,24 @@ YOLO consists of 24 convolutional layers to extract features from the image and 
 
 \paragraph{Training}
 
+At training time only one bounding box predictor is wanted to be responsible for each object, so one predictor is chosen based on which prediction has the highest current IOU with the ground truth. YOLO uses the sum squared error as its loss function with some modifications. Firstly, there should be a weight to distinguish localization error with classification error. Thus, YOLO increases the loss from bounding box coordinate predictions. Secondly, since there are many grid cells not containing any object, which pushes the confidence score towards zero, the loss from confidence predictions for boxes that don’t contain any object is decreased. Thirdly, deviations in large boxes should also matter less than in small boxes, so the square root of the bounding box width and height is predicted instead of width and height directly. Finally, the loss function only penalizes classification error if an object is present in that grid cell and only penalizes the bounding box coordinates error if an object is present in that grid cell and if that bounding box has the highest IOU among other predicted bounding boxes in the grid cell. Specifically, the loss function is defined as:
 
+$ \lambda_{cood}\sum^{S^{2}}_{i=0}\sum^{B}_{j=0}\mathbb{1}_{i,j}^{obj}\left[(x_{i} - \hat{x}_{i})^{2} + (y_{i} - \hat{y}_{i})^{2}\right]\\
+ + \lambda_{cood}\sum^{S^{2}}_{i=0}\sum^{B}_{j=0}\mathbb{1}_{i,j}^{obj}\left[(\sqrt{w_{i}} - \sqrt{\hat{w}_{i}})^{2} + (\sqrt{h_{i}} - \sqrt{\hat{h}_{i}})^{2}\right]\\
+ + \sum^{S^{2}}_{i=0}\sum^{B}_{j=0}\mathbb{1}_{i,j}^{obj}(C_{i} - \hat{C}_{i})^{2} +  \lambda_{noobj}\sum^{S^{2}}_{i=0}\sum^{B}_{j=0}\mathbb{1}_{i,j}^{noobj}(C_{i} - \hat{C}_{i})^{2}\\
+  + \sum^{S^{2}}_{i=0}\mathbb{1}_{i}^{obj}\sum_{c\in{class}}(p_{i}(c) - \hat{p}_{i}(c))^{2}$
 
+where $ \mathbb{1}_{i}^{obj} $ denotes if object appears in cell $ i $ and $ \mathbb{1}_{i,j}^{obj} $ denotes that the $j$th bounding box predictor in cell $ i $ has the highest IOU among other predicted bounding boxes in the grid cell.
+
+To avoid overfitting, YOLO introduce a dropout layer with rate 0.5 after the first connected layer. Data augmentation is also applied by random scaling and translations of up to 20\% of the original image size.
 
 \paragraph{Inference}
-At test time, the conditional class probabilities is multiplied with the individual box confidence predictions, which results in class-specific confidence.
 
-\subsection{YOLO v2}
+At test time, YOLO computes the class-specific confidence for each bounding box by multiplying the conditional class probabilities with the individual box confidence predictions. Same as training, predicting detections requires only a single network evaluation, which turns out to be much faster than those classifier-based methods. Sometimes there are large objects or objects near the border well predicted by multiple grid cells, non-maximal suppression is used when an object is localized by multiple cells.
+
+\paragraph{YOLO v2}
+YOLO v2 has done some improvements to YOLO based on some ideas from other high accuracy object detection methods such as Faster R-CNN \cite{}. It adds batch normalization to replace the dropout layer and achieves a better convergence. It also increases the resolution of input images for training and fine tunes the network to adjust its filters to work better on higher resolution input. Finally, it removes the fully connected layers from YOLO and uses anchor boxes to predict offsets instead of the coordinates for the bounding boxes. In the same time, the class prediction mechanism is also decoupled from the spatial location so that the network can predict class for every anchor box and realize multiple objects prediction per grid cell.
+
 
 \section{Model}
 \section{Training}
