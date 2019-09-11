@@ -9,20 +9,26 @@ Dummy text.
 \subsection{Synthetic data}
 
 Dummy text.
+\subsubsection{Sixd}
 
-\subsection{Realistic data}
 
-Dummy text.
+\subsubsection{Suncg}
+
+\subsection{Real data}
+We aim to have a nice generalization of our model to real data. Thus, we mainly focus on the prediction result of our model on datasets consisting real data.
+
+\subsubsection{NYU-Depth}
+The NYU-Depth V2 dataset is comprised of video sequences from a variety of indoor scenes as recorded by both the RGB and Depth cameras from the Microsoft Kinect. It features 1449 densely labeled pairs of aligned RGB and depth images among 464 scenes taken from 3 cities plus 407,024 unlabeled frames. Each object in the data is labeled with a class and an instance number.
+
+However, the dataset does not provide any reconstructed 3D scenes or models, so that we cannot generate ground truth of the 2D coordinates labels for the corresponding 3D keypoints. It doesn't provide any camera pose information for each image as well, so there is no ground truth for camera location. Thus, NYU-Depth dataset is  applicable for neither training nor testing procedure in our work.
+
+\subsubsection{7Scenes}
 
 \subsubsection{Scannet}
 
 
+\subsection{Dataset processing}
 
+\paragraph{Ordre of corners}
+\paragraph{Data filtering}
 
-\paragraph{Example Paragraph}
-
-Dummy text.
-
-\subparagraph{Example Subparagraph}
-
-Dummy text.
