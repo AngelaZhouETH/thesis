@@ -14,15 +14,21 @@ Dummy text.
 
 \subsubsection{Suncg}
 
+
 \subsection{Real data}
-We aim to have a nice generalization of our model to real data. Thus, we mainly focus on the prediction result of our model on datasets consisting real data.
+We aim to have a nice generalization of our model to real data. Thus, we mainly focus on the prediction result of our model on datasets consisting real data. In this subsection, we introduce some current datasets containing real data of indoor environments, and elaborate whether they are capable to be used in our work.
 
 \subsubsection{NYU-Depth}
 The NYU-Depth V2 dataset is comprised of video sequences from a variety of indoor scenes as recorded by both the RGB and Depth cameras from the Microsoft Kinect. It features 1449 densely labeled pairs of aligned RGB and depth images among 464 scenes taken from 3 cities plus 407,024 unlabeled frames. Each object in the data is labeled with a class and an instance number.
 
-However, the dataset does not provide any reconstructed 3D scenes or models, so that we cannot generate ground truth of the 2D coordinates labels for the corresponding 3D keypoints. It doesn't provide any camera pose information for each image as well, so there is no ground truth for camera location. Thus, NYU-Depth dataset is  applicable for neither training nor testing procedure in our work.
+However, the dataset does not provide camera pose information or camera extrinsic parameters for each image, so there is no ground truth for camera location. It also doesn't provide any reconstructed 3D scenes or models, so that we cannot generate ground truth of the 2D coordinates labels for the corresponding 3D keypoints. Thus, NYU-Depth dataset is not applicable for our training or testing procedure.
 
-\subsubsection{7Scenes}
+\subsubsection{7-Scenes}
+The 7-Scenes dataset is a collection of tracked RGB-D camera frames recorded from a handheld Kinect at $640 \times 480$ resolution. It uses KinectFusion system to obtain the ground truth camera tracks and a dense 3D model. Many works and applications in relocalization and dense tracking and mapping use 7-scenes for evaluation, such as the camera relocalization work from Wu et al \cite{wu2017delving}. While 7-Scenes are available for end-to-end camera pose learning methods, it does not suit for our object pose detection based method.
+
+For the training procedure and labeling, our method needs the object's 3D model and position with respect to the camera as a prior knowledge. 7-Scenes has provided the dense reconstruction represented by signed distance volume of each scene. However, there is no category or object instance labeling related with the 3D scenes. Thus, we cannot get the 3D model and corresponding 2D labels for each object and train for 6D object pose detection. Also, there are limited number of scenes, 7 exactly, which is not enough for our training procedure, where we aim to generalize to as many as possible different scenes. 
+
+During testing, we do not need the 3D object model any more for 6D object pose detection as long as there is trained category object exists in the image. However, our estimation of camera location is with respect to the object. If we have knowledge of the object 3D position with respect to the scene, we can also calculate the camera pose with respect to the scene. 7-Scenes only provides ground truth camera pose with respect to the scene, but do not have any knowledge of the object position. Thus, we cannot compute the camera location with respect to the scenes and 7-Scenes dataset is not applicable for evaluation in our method.
 
 \subsubsection{Scannet}
 
