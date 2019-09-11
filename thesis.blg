@@ -3,46 +3,44 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: thesis.aux
 The style file: plain.bst
 Database file #1: refs.bib
-Warning--I didn't find a database entry for "bringhurst1996ets"
-You've used 7 entries,
+You've used 11 entries,
             2118 wiz_defined-function locations,
-            538 strings with 5419 characters,
-and the built_in function-call counts, 3403 in all, are:
-= -- 343
-> -- 151
-< -- 5
-+ -- 59
-- -- 52
-* -- 229
-:= -- 503
-add.period$ -- 22
-call.type$ -- 7
-change.case$ -- 47
+            559 strings with 6218 characters,
+and the built_in function-call counts, 5330 in all, are:
+= -- 533
+> -- 243
+< -- 8
++ -- 95
+- -- 84
+* -- 352
+:= -- 787
+add.period$ -- 35
+call.type$ -- 11
+change.case$ -- 75
 chr.to.int$ -- 0
-cite$ -- 7
-duplicate$ -- 145
-empty$ -- 265
-format.name$ -- 52
-if$ -- 756
+cite$ -- 11
+duplicate$ -- 230
+empty$ -- 419
+format.name$ -- 84
+if$ -- 1188
 int.to.chr$ -- 0
-int.to.str$ -- 7
-missing$ -- 7
-newline$ -- 38
-num.names$ -- 14
-pop$ -- 58
+int.to.str$ -- 11
+missing$ -- 11
+newline$ -- 58
+num.names$ -- 22
+pop$ -- 99
 preamble$ -- 1
-purify$ -- 40
+purify$ -- 64
 quote$ -- 0
-skip$ -- 125
+skip$ -- 193
 stack$ -- 0
-substring$ -- 252
-swap$ -- 65
-text.length$ -- 5
+substring$ -- 376
+swap$ -- 102
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 28
+type$ -- 44
 warning$ -- 0
-while$ -- 32
-width$ -- 8
-write$ -- 80
-(There was 1 warning)
+while$ -- 49
+width$ -- 13
+write$ -- 124

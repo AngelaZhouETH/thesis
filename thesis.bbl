@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{brachmann2017dsac}
 Eric Brachmann, Alexander Krull, Sebastian Nowozin, Jamie Shotton, Frank
@@ -6,6 +6,12 @@ Eric Brachmann, Alexander Krull, Sebastian Nowozin, Jamie Shotton, Frank
 \newblock Dsac-differentiable ransac for camera localization.
 \newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
   Pattern Recognition}, pages 6684--6692, 2017.
+
+\bibitem{glocker2013real}
+Ben Glocker, Shahram Izadi, Jamie Shotton, and Antonio Criminisi.
+\newblock Real-time rgb-d camera relocalization.
+\newblock In {\em 2013 IEEE International Symposium on Mixed and Augmented
+  Reality (ISMAR)}, pages 173--179. IEEE, 2013.
 
 \bibitem{kehl2017ssd}
 Wadim Kehl, Fabian Manhardt, Federico Tombari, Slobodan Ilic, and Nassir Navab.
@@ -19,12 +25,31 @@ Vincent Lepetit, Francesc Moreno-Noguer, and Pascal Fua.
 \newblock Epnp: An accurate o (n) solution to the pnp problem.
 \newblock {\em International journal of computer vision}, 81(2):155, 2009.
 
+\bibitem{Silberman:ECCV12}
+Pushmeet~Kohli Nathan~Silberman, Derek~Hoiem and Rob Fergus.
+\newblock Indoor segmentation and support inference from rgbd images.
+\newblock In {\em ECCV}, 2012.
+
 \bibitem{rad2017bb8}
 Mahdi Rad and Vincent Lepetit.
 \newblock Bb8: A scalable, accurate, robust to partial occlusion method for
   predicting the 3d poses of challenging objects without using depth.
 \newblock In {\em Proceedings of the IEEE International Conference on Computer
   Vision}, pages 3828--3836, 2017.
+
+\bibitem{redmon2016you}
+Joseph Redmon, Santosh Divvala, Ross Girshick, and Ali Farhadi.
+\newblock You only look once: Unified, real-time object detection.
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition}, pages 779--788, 2016.
+
+\bibitem{shotton2013scene}
+Jamie Shotton, Ben Glocker, Christopher Zach, Shahram Izadi, Antonio Criminisi,
+  and Andrew Fitzgibbon.
+\newblock Scene coordinate regression forests for camera relocalization in
+  rgb-d images.
+\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}, pages 2930--2937, 2013.
 
 \bibitem{tekin2018real}
 Bugra Tekin, Sudipta~N Sinha, and Pascal Fua.
