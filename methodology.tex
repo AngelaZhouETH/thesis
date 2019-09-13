@@ -43,16 +43,12 @@ Our model follows B. Tekin's model \cite{tekin2018real} which performs 6D object
 
 We choose the keypoints of the 3D object model as the 8 corners of the object's tight 3D bounding box plus the centroid of the object's 3D model. Thus, we parameterize the 3D model of each object with 9 control points. The control points are guaranteed to be well spread out in the 2D image. In practice, the control points can be defined in other ways as well.
 
-Given a single full color image as input, our model processes it with a fully convolutional architecture and divides the image into a 2D regular grid containing $ S \times S $ cells as YOLO does. Each grid is associated with a multidimensional vector as the output. The vector consists of the predicted locations of the 9 control points, the class probabilities of the object and an overall confidence score. Thus, the output of our network is a 3D sensor of size $ S \times S \times D $. In out case, $D = 9\times2+1+C$, where the location of each 2D control point contain 2 coordinates and C is the number of classes. The network is based on YOLO v2's network and consists of 23 convolutional layers and 5 max-pooling layers.
+Given a single full color image as input, our model processes it with a fully convolutional architecture and divides the image into a 2D regular grid containing $ S \times S $ cells as YOLO does. Each grid is associated with a multidimensional vector as the output. The vector consists of the predicted locations of the 9 control points, C class probabilities of the object and one overall confidence score. Thus, the output of our network is a 3D sensor of size $ S \times S \times D $. In out case, $D = 9\times2+1+C$, where the location of each 2D control point contain 2 coordinates and C is the number of classes. Same as YOLO, the conditional class probabilities is  conditioned on the cell containing an object. The network is based on YOLO v2's network and consists of 23 convolutional layers and 5 max-pooling layers.
 
-YOLO calculates the confidence value by the intersection over union (IOU) between the predicted box and the ground truth.
-Model the confidence value using a confidence function
-DT(x) is the euclidean distance in the image space
-Choose a cut-off value d\_th instead of a monotonically decreasing linear function
-The sharpness of the exponential function is defined by the parameter (alpha)
-Confidence =  apply the confidence function to all the control points and calculate the mean value
+In YOLO the confidence value is calculated by the intersection over union (IOU) between the predicted box and the ground truth. However, we have 3D objects in our case and it is not easy or fast to calculate the IOU over 3D voxel cuboids. In order not to slow down the training procedure, we take a confidence function to model the confidence value as introduced in \cite{tekin2018real}. As shown in figure , the confidence function c(x) returns a confidence value for a predicted 2D point, denoted as x, based on its distance $ D_{T}(x) $ from the ground truth 2D point. Formally, the confidence function is defined as follows:
 
 
+where $ D_{T}(x) $ is the euclidean distance in the image space, $ d_{th} $ is a cut-off value $ d_{th} $ so that if the distance is not less than it, simply set the confidence score to 0, and the parameter $ \alpha $ defines the sharpness of the exponential function. The overall confidence score of the predicted bounding box is then computed as the mean value of the confidence value of all the control points.
 
 \section{Training}
 During training the confidence value is computed on the fly using the confidence function in Eq. 1 to measure the distance between the current coordinates prediction and the ground truth, DT(x)
@@ -60,12 +56,16 @@ Predict the offsets for the 2D coordinates with respect to (cx, cy), the top-lef
 We constrain the centroid within the associated grid cell, i.e. the offset of the centroid to lie between 0 and 1. For the corner points we do not constrain the network’s output as those points should be allowed to fall outside the cell.
 
 \section{Prediction}
-Predictions at cells with low confidence values will be pruned
+Predictions at cells with low confidence values will be pruned.
 
 \section{Implementation Details}
 
-Leonhard cluster
-Batch size 8
+We train our network on Leonhard cluster. Since we have limited memory assigned to each GPU node  on the cluster, we can only train with batch size of 8.
 700 epochs
-Adam 
+Learning algorithm
+-SGD
+-Adam
+Error metric
+-Error of corner indices ordering
+-Unit
 

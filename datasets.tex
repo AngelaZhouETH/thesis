@@ -4,16 +4,135 @@ Dummy text.
 
 \section{Dataset types}
 
-Dummy text.
+In this section, we introduce the datasets we have used or have considered to use in our work. We divide the datasets in two parts, synthetic and real. Our idea is to use synthetic data to help with training and realize a better prediction on real data.
 
 \subsection{Synthetic data}
 
-Dummy text.
-\subsubsection{Sixd}
+For synthetic data we have used SunCG dataset and SIXD toolkit to render some simple views of single object from SunCG .
 
+\subsubsection{SunCG}
+SunCG dataset is a manually created large-scale dataset of synthetic 3D scenes with dense volumetric annotations \cite{song2016ssc}
 
-\subsubsection{Suncg}
+\subsubsection{SIXD}
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_xscale_nobg/0002.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_xscale_nobg/0009.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_xscale_nobg/0073.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_xscale_nobg/0081.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_xscale_nobg/0092.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_xscale_nobg/0103.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_xscale_nobg/0528.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_xscale_nobg/0529.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_xscale_nobg/0706.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_xscale_nobg/0713.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_xscale_nobg/0719.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_xscale_nobg/0720.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_xscale_nobg/0722.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_xscale_nobg/0723.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_xscale_nobg/0762.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_xscale_nobg/1289.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_xscale_nobg/1294.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_xscale_nobg/1309.png}
+  \end{subfigure}
+  \caption{SIXD rendering }
+  \label{fig:sixd_sofa_xscale_nobg}
+\end{figure}
 
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_bg/0000.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_bg/0249.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_bg/0324.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_bg/0378.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_bg/0403.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_bg/0527.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_bg/0571.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_bg/0585.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_bg/0591.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_bg/0668.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_bg/0769.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_bg/0781.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_bg/0806.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_bg/0863.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_bg/0950.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_bg/1008.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_bg/1256.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{sixd_sofa_bg/1259.png}
+  \end{subfigure}
+  \caption{SIXD rendering of sofa in random texture with random background}
+  \label{fig:sixd_sofa_bg}
+\end{figure}
 
 \subsection{Real data}
 We aim to have a nice generalization of our model to real data. Thus, we mainly focus on the prediction result of our model on datasets consisting real data. In this subsection, we introduce some current datasets containing real data of indoor environments, and elaborate whether they are capable to be used in our work.
@@ -33,7 +152,7 @@ During testing, we do not need the 3D object model any more for 6D object pose d
 \subsubsection{ScanNet}
 ScanNet is originally introduced by Dai et al in 2017 for 3D reconstructions of indoor scenes \cite{dai2017scannet}. ScanNet is an RGB-D video dataset containing 2.5 million views in more than 1500 scans, annotated with 3D camera poses, surface reconstructions, and instance-level semantic segmentations. To collect the data, an easy-to-use and scalable RGB-D capture system includes automated surface reconstruction and crowdsourced semantic annotation is designed. Using this data helps achieve state-of-the-art performance on several 3D scene understanding tasks, including 3D object classification, semantic voxel labeling, and CAD model retrieval.
 
-The instance-level semantic segmentation on the 3D reconstructions helps us to generate our labels in this work. We can use the segmentation information to extract each object and find the tight 3D bounding box of it. Then we use the camera pose provided correspondence to each RGB-image to compute the 2D projections of the 9 control points of the 3D model. During evaluation, we would need a 3D model of the object or the locations of the bounding box of the 3D model to compute the camera pose with respect to the object using PnP algorithm. If the object position with respect to the scene is given, we can also compute the camera extrinsic parameters and compare with the ground truth camera pose. Thus, ScanNet is good for both training and testing procedure in our work, and we can use it alone for our training procedure or mix it with SUNCG or sixd rendering images. We use it  as our main testing dataset and aim to realize a good camera localization on this real data of indoor environments.
+The instance-level semantic segmentation on the 3D reconstructions helps us to generate our labels in this work. We can use the segmentation information to extract each object and find the tight 3D bounding box of it. Since the object is already in its location with respect to the scene, we can directly use the camera pose provided correspondence to each RGB-image to compute the 2D projections of the 9 control points of the 3D model. However, if we want to compute the camera pose with respect to the scene, we need to save the object position in the scene, and apply the reverse of it after we get the camera pose with respect to the object from PnP algorithm. During evaluation, we would need a 3D model of the object or the locations of the bounding box of the 3D model to compute the camera pose with respect to the object using PnP algorithm. If the object position with respect to the scene is given or saved, we can also compute the camera extrinsic parameters and compare with the ground truth camera pose. Thus, ScanNet is good for both training and testing procedure in our work, and we can use it alone for our training procedure or mix it with SUNCG or sixd rendering images. We use it  as our main testing dataset and aim to realize a good camera localization on this real data of indoor environments.
 
 However, during implementation there are some limitations due to the drawbacks of ScanNet dataset. The error of our labeling is mainly due to the incomplete reconstruction of the 3D models. Firstly, the bounding box of the 3D model is incorrect due to partly reconstruction of some objects. Some of the bounding boxes may turn out to pass through the object instead of bound it. As shown in figure ?, the legs of the chair is not fully constructed in its 3D mesh, and the result labeling shows an error bounding box. This incomplete reconstruction usually happens to the thin or tiny part of the object, due to the noises from scanning. Also, the incompleteness may frequently occur to the back and downside of the object or the side of the object against the wall or facing the floor. Those sides are not well scanned due to hard access of the camera, so they are often poorly reconstructed. Secondly, the bounding box is not well aligned with the axis. Since this dataset is from real data, there is no existing object model as the synthetic dataset provides. We extract the 3D model of the object from the 3D reconstruction of the whole scene using the instance-level segmentation information provided by ScanNet. Thus, our extracted 3D model may not be aligned with the axis. Since our 3D bounding box is calculated by the minimum and maximum values of each axis, we need to rotate the 3D object model to be aligned with the axis to get the tightest bounding box. Since all of the reconstructed object has a upright direction of z = 1, this makes our job easier. We only need to find out the direction in xy plane for aligning the object. In the ideal case, our initial idea is to use PCA to get the axis directions. However, due to the error and noises introduced by reconstruction, the object may not be symmetrically reconstructed. Sometimes one leg of the four legs of the table is missing, leading the PCA direction to be the diagonal of the top of table rectangle. Even though the object is completely reconstructed, the number of points are not equally distributed on the object mesh - one side may have mesh denser vertices than the other side. This also leads to the PCA not aligned with the ideal direction. To address this problem, we rotate the model in xy plane from -30 degree to 30 degree and calculate the new bounding box per 5 degree gap and take the smallest bounding box we ever get. This solves the problem to a large extent, but not very accurate since we set the granularity to 5 degree in trade off with the processing speed. Thirdly, some reconstruction has a distortion. As we can see from figure , the floor of the whole scene is not flat. Thus, the object model is not accurately aligned with z axis sometimes. We can also do the same trick to rotate the object in zx and yz plane, and get the tightest bounding box, but the result is not always better. The main reason is due to incomplete reconstruction as well. As we can see in figure , the most frequently incomplete reconstruction occurs at the bottom back side of the object. When we rotate the couch in yz plane (we assume the longest side is aligned to x axis), the tightest bounding box becomes the one passing though the actual object but bound to the incomplete mesh. Thus, in either way, whether we refine the upright direction or not, we cannot get an ideal result due to the noises introduced by the scanning and reconstruction. Lastly, there is some noise on camera calibration and camera pose. Camera calibration is not very stable for all the scans - each scan may have a bit deviation on camera intrinsic parameters. However, in training and testing time we do not change camera intrinsic parameter depending on the scan that the input image belongs to. Therefore, some noises may be generated from this small error.
  
