@@ -11,7 +11,15 @@ In this section, we introduce the datasets we have used or have considered to us
 For synthetic data we have used SunCG dataset and SIXD toolkit to render some simple views of single object from SunCG .
 
 
-\subsubsection{SIXD}
+\subsubsection{SIXD Toolkit}
+
+SIXD toolkit is implemented by Hodan et al to facilitate participation in the SIXD Challenge, of which the goal is to evaluate methods for 6D object pose estimation of a rigid object from RGB or RGB-D images and to establish the state of the art. The challenge results are included in their work BOP: Benchmark for 6D Object Pose Estimation \cite{hodan2018bop}.
+
+The toolkit provides functions of rendering a given object in different camera views and supports user customized textures. Thus, we use it to render object in different camera views and randomize the texture of the object and generate some synthetic images for training and testing in our work.
+
+
+
+
 \begin{figure}[h!]
   \centering
   \begin{subfigure}[b]{0.32\linewidth}
@@ -132,6 +140,7 @@ For synthetic data we have used SunCG dataset and SIXD toolkit to render some si
   \label{fig:sixd_sofa_bg}
 \end{figure}
 
+However, section~\vref{sec:SIXD}.
 
 \subsubsection{SunCG}
 SunCG dataset is a manually created large-scale dataset of synthetic 3D scenes with dense volumetric annotations \cite{song2016ssc}
