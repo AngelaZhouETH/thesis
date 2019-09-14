@@ -3,6 +3,7 @@
 There are a lot of limitations on our current work and a lot of potential work in the future. In this chapter, we summarize the limitations in our work from our model to the datasets, and state possible future work to get a better result in real-time image-based camera localization.
 
 \section{Network}
+
 Since our model learns to predict 2D projections of 3D bounding box from limited training data, sometimes it cannot generalize well to objects in new or unusually perspective of views. For example, in our testing data for couch, the result of predicting from back of the couch is not as good as the prediction from the front view.
 
 Our loss function also does not distinguish the error of predicted 2D points and ground truth in small 3D bounding box versus large 3D bounding box. A small error in a large box is generally negligible but the same error in a small box has a much greater effect on the result or IOU. Thus, further improvement on the loss function is possible.

@@ -4,7 +4,7 @@ This work is following B. Tekin's real-time single shot 6D object pose detection
 
 In this section, we first review the network architecture of some single shot object detection methods, we take YOLO and YOLO v2  for examples, and then elaborate our improvements on it for a camera localization problem.
 
-\section{Single shot object detection}
+\section{Single shot 2D object detection}
 
 The network architecture of our work is based on YOLO v2 but is amenable to other single shot detectors such as SSD and its variants. In this section we briefly introduce the network architecture of YOLO and YOLO v2.
 
@@ -28,12 +28,11 @@ At training time only one bounding box predictor is wanted to be responsible for
     &+ \sum^{S^{2}}_{i=0}\mathbb{1}_{i}^{obj}\sum_{c\in{class}}(p_{i}(c) - \hat{p}_{i}(c))^{2}
 \end{aligned}
 \end{equation}
-where $ \mathbb{1}_{i}^{obj} $ denotes if object appears in cell $ i $ and $ \mathbb{1}_{i,j}^{obj} $ denotes that the $j$th bounding box predictor in cell $ i $ has the highest IOU among other predicted bounding boxes in the grid cell.
+where $ \mathbb{1}_{i}^{obj} $ denotes if object appears in cell $ i $ and $ \mathbb{1}_{i,j}^{obj} $ denotes that the $j$th bounding box predictor in cell $ i $ has the highest IOU among other predicted bounding boxes in the grid cell. $ \lambda_{coord} $ is set to 5 and $ \lambda_{noobj} $ is set to 0.5.
 
 To avoid overfitting, YOLO introduce a dropout layer with rate 0.5 after the first connected layer. Data augmentation is also applied by random scaling and translations of up to 20\% of the original image size.
 
 \subsubsection{Inference}
-
 At test time, YOLO computes the class-specific confidence for each bounding box by multiplying the conditional class probabilities with the individual box confidence predictions. Same as training, predicting detections requires only a single network evaluation, which turns out to be much faster than those classifier-based methods. Sometimes there are large objects or objects near the border well predicted by multiple grid cells, non-maximal suppression is used when an object is localized by multiple cells.
 
 \subsubsection{YOLO v2}
@@ -47,11 +46,11 @@ YOLO v2 has done some improvements to YOLO based on some ideas from other high a
   \label{fig:methodology}
 \end{figure}
 
-Our model follows B. Tekin's model \cite{tekin2018real} which performs 6D object pose detection based on YOLO v2 architecture. Since YOLO's network is designed to regress only 2D bounding boxes, a few more 2D points had to be added for 6D object detection. In our model, a CNN-based network predicts 2D projections of the corners of the 3D bounding box around the object. Then a PnP algorithm is used to compute camera pose efficiently given the 2D coordinates and 3D ground control points for the bounding box corners.
+Our model follows B. Tekin's model \cite{tekin2018real} which performs 6D object pose detection based on YOLO v2 architecture. Since YOLO's network is designed to regress only 2D bounding boxes, a few more 2D points had to be added for 6D object detection. In our model, a CNN-based network predicts 2D projections of the corners of the 3D bounding box around the object. Then a PnP algorithm is used to compute camera pose with respect to the object efficiently given the 2D coordinates and 3D ground control points, i.e. the object's 3D bounding box corners.
 
 We choose the keypoints of the 3D object model as the 8 corners of the object's tight 3D bounding box plus the centroid of the object's 3D model. Thus, we parameterize the 3D model of each object with 9 control points. The control points are guaranteed to be well spread out in the 2D image. In practice, the control points can be defined in other ways as well.
 
-Given a single full color image as input, our model processes it with a fully convolutional architecture and divides the image into a 2D regular grid containing $ S \times S $ cells as YOLO does. Each grid is associated with a multidimensional vector as the output. The vector consists of the predicted locations of the 9 control points, C class probabilities of the object and one overall confidence score. Thus, the output of our network is a 3D sensor of size $ S \times S \times D $. In out case, $D = 9\times2+1+C$, where the location of each 2D control point contain 2 coordinates and C is the number of classes. Same as YOLO, the conditional class probabilities is  conditioned on the cell containing an object. The network is based on YOLO v2's network and consists of 23 convolutional layers and 5 max-pooling layers.
+Given a single full color image as input, our model processes it with a fully convolutional architecture shown in Figure \ref{fig:methodology} and divides the image into a 2D regular grid containing $ S \times S $ cells same as YOLO does. Each grid in our model is associated with a multidimensional vector, which consists of the predicted locations of the control points, class probabilities of the object and an overall confidence score. When N objects are present in different cells, we have N such vectors. we train our network to predict these target values. Thus, the output of our network is a 3D sensor of size $ S \times S \times D $, where D is the size of the multidimensional vector. In our case, $D = 9\times2+1+C$, where the location of each 2D control point consists 2 coordinates and C is the number of classes our model can predict. Same as YOLO, the conditional class probabilities is  conditioned on the cell containing an object.
 
 \begin{figure}
 \centering
@@ -59,7 +58,8 @@ Given a single full color image as input, our model processes it with a fully co
   \caption{Confidence function}
   \label{fig:conf_func}
 \end{figure}
-In YOLO the confidence value is calculated by the intersection over union (IOU) between the predicted box and the ground truth. However, we have 3D objects in our case and it is not easy or fast to calculate the IOU over 3D voxel cuboids. In order not to slow down the training procedure, we take a confidence function to model the confidence value as introduced in \cite{tekin2018real}. As shown in figure , the confidence function c(x) returns a confidence value for a predicted 2D point, denoted as x, based on its distance $ D_{T}(x) $ from the ground truth 2D point. Formally, the confidence function is defined as follows:
+
+In YOLO the confidence value is calculated by the intersection over union (IOU) between the predicted box and the ground truth. However, we have 3D objects in our case and it is not easy or fast to calculate the IOU over 3D voxel cuboids. In order not to slow down the training procedure, we take a confidence function to model the confidence value as introduced in \cite{tekin2018real}. As shown in Figure \ref{fig:conf_func}, the confidence function c(x) returns a confidence value for a predicted 2D point, denoted by x, based on its distance $ D_{T}(x) $ from the ground truth 2D point. Formally, the confidence function is defined as follows:
 \begin{equation}
 \label{eqn:conf_func}
 c(x)=\left\{
@@ -69,24 +69,28 @@ c(x)=\left\{
 \end{aligned}
 \right.
 \end{equation}
-where $ D_{T}(x) $ is the euclidean distance in the image space, $ d_{th} $ is a cut-off value $ d_{th} $ so that if the distance is not less than it, simply set the confidence score to 0, and the parameter $ \alpha $ defines the sharpness of the exponential function. The overall confidence score of the predicted bounding box is then computed as the mean value of the confidence value of all the control points.
+where $ D_{T}(x) $ is the 2D Euclidean distance in the image space, $ d_{th} $ is a cut-off value $ d_{th} $ so that if the distance is no less than it, simply set the confidence score to 0, and the parameter $ \alpha $ defines the sharpness of the exponential function. The overall confidence score of the predicted bounding box is then computed as the mean value of the confidence value of all the control points.
+
+Our network is based on YOLO v2's network and consists of 23 convolutional layers and 5 max-pooling layers. Similar to YOLO v2, we choose $ S = 13 $. As the network downsamples the image by a factor of 32, the input resolution is set to 416 $ \times $ 416. We also added a passthrough layer to let the higher layers of our network use fine-grained features.
+
+Our model also supports detecting multiple objects in one grid cell. When multiple objects are close to each other, their centroid may fall in the same grid cell. We allow each grid to predict up to 5 bounding boxes so that multiple nearby objects or occluded objects can be detected. As in YOLO v2, we precompute five anchor boxes that define the size of a 2D rectangle tightly fitted to a masked region around the object in the image. During training, we assign whichever anchor box has the most similar size to the current object as the responsible one to predict the 2D coordinates for that object.
 
 \section{Training}
-During training the confidence value is computed on the fly using the confidence function in Eq. \ref{eqn:conf_func} to measure the distance between the current coordinates prediction and the ground truth, DT(x)
-Predict the offsets for the 2D coordinates with respect to (cx, cy), the top-left corner of the associated grid cell.
-We constrain the centroid within the associated grid cell, i.e. the offset of the centroid to lie between 0 and 1. For the corner points we do not constrain the network’s output as those points should be allowed to fall outside the cell.
+
+During training, the confidence value is computed on the fly using the confidence function in Eq. \ref{eqn:conf_func} to measure the distance between the current coordinate predictions and the ground truth. Each grid cell predicts the offsets for the 2D coordinates with respect to (cx, cy), the top-left corner of the cell. We constrain the centroid within the associated grid cell, i.e. the offset of the centroid to lie between 0 and 1. We do not constrain the network's output for the corner points as those points should be allowed to fall outside the cell.
+
+Our loss function is the sum of the loss from all of the three components - coordinate loss, classification loss, and loss from confidence value. We use mean squared error for the coordinate and confidence value losses, and use cross entropy for the classification loss. In this way, we don't need to increase the weight for coordinate loss any more to distinguish coordinate loss with classification loss as suggested by YOLO. Similar to YOLO, we downweight the loss from confidence value for cells that don't contain objects, and increase the weight of confidence loss for cells that contain objects. This improves the model's stability. Formally, the loss function is defined as:
+\begin{equation}
+L = \lambda_{pt}L_{pt} + \lambda_{coof}L_{coof} + \lambda_{id}L_{id}
+\end{equation}
+where $ L_{pt} $, $ L_{coof} $, $ L_{id} $ denote the coordinate, confidence and the classification loss respectively. $ \lambda_{coof} $ is set to 0.1 for cells that don't contain objects and to 5 for cells that contain objects. $ \lambda_{pt} $ and $ \lambda_{id} $ are set simply to 1.
 
 \section{Prediction}
-Predictions at cells with low confidence values will be pruned.
+At test time, the prediction procedure invokes the network only once. We compute the class-specific confidence scores for each object by multiplying the conditioned class probability and the confidence value of the prediction returned by the confidence function, and cells with predictions with low confidence values are pruned. For large objects or objects whose centroid lies close to the border of grid cells, multiple grid cells may have good prediction of it. In order to achieve a more robust and accurate model, we inspect all gird cells in a $ 3 \times 3 $ neighborhood of the cell having highest confidence score. We compute the weighted average of the predictions of the 2D locations according to the confidence scores.
+
+At run-time, the network outputs the 2D coordinates prediction of the projections of the object's control points together with the classification. We can estimate the 6D camera pose with respect to the object using a PnP algorithm with the corresponding 2D and 3D points. After we get the 6D camera pose with respect to the object, we can compare the camera pose with respect to the scene by applying the transform of the object's position in the scene.
 
 \section{Implementation Details}
 
-We train our network on Leonhard cluster. Since we have limited memory assigned to each GPU node  on the cluster, we can only train with batch size of 8.
-700 epochs
-Learning algorithm
--SGD
--Adam
-Error metric
--Error of corner indices ordering
--Unit
+We train our network on Leonhard cluster. Since we have limited memory assigned to each GPU node  on the cluster, we can only train with batch size of 8. We run the training for 700 epochs and select the best weights according to the accuracy in validation data. For optimization, we have experimented both SGD and Adam algorithms. It turns out Adam results in a better and more robust prediction. We set the learning rate to 0.001. For the PnP algorithm, we tested on both with RANSAC and without. It turns out the result does not differ a lot, indicating that our predictions for the 9 control points seldom contain outliers. For the error metrics, in addition to rotation and translation errors of camera pose, 2D euclidean error for all of the projected vertices and control points, we also have accuracy of 2D and 3D vertices that have an error prediction with a threshold and we calculate the error of corner indices ordering as well.
 
