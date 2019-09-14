@@ -20,7 +20,6 @@ YOLO consists of 24 convolutional layers to extract features from the image and 
 \subsubsection{Training}
 
 At training time only one bounding box predictor is wanted to be responsible for each object, so one predictor is chosen based on which prediction has the highest current IOU with the ground truth. YOLO uses the sum squared error as its loss function with some modifications. Firstly, there should be a weight to distinguish localization error with classification error. Thus, YOLO increases the loss from bounding box coordinate predictions. Secondly, since there are many grid cells not containing any object, which pushes the confidence score towards zero, the loss from confidence predictions for boxes that don’t contain any object is decreased. Thirdly, deviations in large boxes should also matter less than in small boxes, so the square root of the bounding box width and height is predicted instead of width and height directly. Finally, the loss function only penalizes classification error if an object is present in that grid cell and only penalizes the bounding box coordinates error if an object is present in that grid cell and if that bounding box has the highest IOU among other predicted bounding boxes in the grid cell. Specifically, the loss function is defined as:
-
 \begin{equation}
 \begin{aligned}
  \lambda_{cood}\sum^{S^{2}}_{i=0}&\sum^{B}_{j=0}\mathbb{1}_{i,j}^{obj}\left[(x_{i} - \hat{x}_{i})^{2} + (y_{i} - \hat{y}_{i})^{2}\right]\\
@@ -29,7 +28,6 @@ At training time only one bounding box predictor is wanted to be responsible for
     &+ \sum^{S^{2}}_{i=0}\mathbb{1}_{i}^{obj}\sum_{c\in{class}}(p_{i}(c) - \hat{p}_{i}(c))^{2}
 \end{aligned}
 \end{equation}
-
 where $ \mathbb{1}_{i}^{obj} $ denotes if object appears in cell $ i $ and $ \mathbb{1}_{i,j}^{obj} $ denotes that the $j$th bounding box predictor in cell $ i $ has the highest IOU among other predicted bounding boxes in the grid cell.
 
 To avoid overfitting, YOLO introduce a dropout layer with rate 0.5 after the first connected layer. Data augmentation is also applied by random scaling and translations of up to 20\% of the original image size.
@@ -43,15 +41,27 @@ YOLO v2 has done some improvements to YOLO based on some ideas from other high a
 
 \section{Model}
 
+\begin{figure}
+  \includegraphics[width=\linewidth]{methodology.png}
+  \caption{Network architecture from \cite{tekin2018real}: (a) The proposed CNN architecture. (b) An example input image with four objects. (c) The $S \times S$ grid showing cells responsible for detecting the four objects. (d) Each cell predicts 2D locations of the corners of the projected 3D bounding boxes in the image. (e) The 3D output tensor from our network, which represents for each cell a vector consisting of the 2D corner locations, the class probabilities and a confidence value associated with the prediction.}
+  \label{fig:methodology}
+\end{figure}
+
 Our model follows B. Tekin's model \cite{tekin2018real} which performs 6D object pose detection based on YOLO v2 architecture. Since YOLO's network is designed to regress only 2D bounding boxes, a few more 2D points had to be added for 6D object detection. In our model, a CNN-based network predicts 2D projections of the corners of the 3D bounding box around the object. Then a PnP algorithm is used to compute camera pose efficiently given the 2D coordinates and 3D ground control points for the bounding box corners.
 
 We choose the keypoints of the 3D object model as the 8 corners of the object's tight 3D bounding box plus the centroid of the object's 3D model. Thus, we parameterize the 3D model of each object with 9 control points. The control points are guaranteed to be well spread out in the 2D image. In practice, the control points can be defined in other ways as well.
 
 Given a single full color image as input, our model processes it with a fully convolutional architecture and divides the image into a 2D regular grid containing $ S \times S $ cells as YOLO does. Each grid is associated with a multidimensional vector as the output. The vector consists of the predicted locations of the 9 control points, C class probabilities of the object and one overall confidence score. Thus, the output of our network is a 3D sensor of size $ S \times S \times D $. In out case, $D = 9\times2+1+C$, where the location of each 2D control point contain 2 coordinates and C is the number of classes. Same as YOLO, the conditional class probabilities is  conditioned on the cell containing an object. The network is based on YOLO v2's network and consists of 23 convolutional layers and 5 max-pooling layers.
 
+\begin{figure}
+\centering
+  \includegraphics[width=0.6\linewidth]{conf_func.png}
+  \caption{Confidence function}
+  \label{fig:conf_func}
+\end{figure}
 In YOLO the confidence value is calculated by the intersection over union (IOU) between the predicted box and the ground truth. However, we have 3D objects in our case and it is not easy or fast to calculate the IOU over 3D voxel cuboids. In order not to slow down the training procedure, we take a confidence function to model the confidence value as introduced in \cite{tekin2018real}. As shown in figure , the confidence function c(x) returns a confidence value for a predicted 2D point, denoted as x, based on its distance $ D_{T}(x) $ from the ground truth 2D point. Formally, the confidence function is defined as follows:
-
 \begin{equation}
+\label{eqn:conf_func}
 c(x)=\left\{
 \begin{aligned}
 &e^{\alpha(1-\dfrac{D_{T}(x)}{d_{th}})}, &\text{if } D_{T}(x) < d_{th}\\
@@ -59,11 +69,10 @@ c(x)=\left\{
 \end{aligned}
 \right.
 \end{equation}
-
 where $ D_{T}(x) $ is the euclidean distance in the image space, $ d_{th} $ is a cut-off value $ d_{th} $ so that if the distance is not less than it, simply set the confidence score to 0, and the parameter $ \alpha $ defines the sharpness of the exponential function. The overall confidence score of the predicted bounding box is then computed as the mean value of the confidence value of all the control points.
 
 \section{Training}
-During training the confidence value is computed on the fly using the confidence function in Eq. 1 to measure the distance between the current coordinates prediction and the ground truth, DT(x)
+During training the confidence value is computed on the fly using the confidence function in Eq. \ref{eqn:conf_func} to measure the distance between the current coordinates prediction and the ground truth, DT(x)
 Predict the offsets for the 2D coordinates with respect to (cx, cy), the top-left corner of the associated grid cell.
 We constrain the centroid within the associated grid cell, i.e. the offset of the centroid to lie between 0 and 1. For the corner points we do not constrain the network’s output as those points should be allowed to fall outside the cell.
 

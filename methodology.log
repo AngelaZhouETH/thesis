@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.13)  13 SEP 2019 19:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.13)  13 SEP 2019 23:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3967,14 +3967,14 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 24--24
  []
 
 
-! LaTeX Error: Environment align* undefined.
+! LaTeX Error: Environment aligned undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.25 \begin{align*}
-                   
+l.25 \begin{aligned}
+                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -4071,14 +4071,14 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-! LaTeX Error: \begin{equation} on input line 24 ended by \end{align*}.
+! LaTeX Error: \begin{equation} on input line 24 ended by \end{aligned}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.30 \end{align*}
-                 
+l.30 \end{aligned}
+                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -7665,17 +7665,104 @@ Overfull \hbox (28.07188pt too wide) in paragraph at lines 52--53
  []
 
 
-! LaTeX Error: Missing \begin{document}.
+! LaTeX Error: Environment aligned undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.55 w
-      here $ D_{T}(x) $ is the euclidean distance in the image space, $ d_{t...
+l.55 \begin{aligned}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+! Misplaced alignment tab character &.
+l.56 &
+      e^{\alpha(1-\dfrac{D_{T}(x)}{d_{th}})}, &\text{if } D_{T}(x) < d_{th}\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Undefined control sequence.
+l.56 &e^{\alpha(1-\dfrac
+                        {D_{T}(x)}{d_{th}})}, &\text{if } D_{T}(x) < d_{th}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Misplaced alignment tab character &.
+l.56 &e^{\alpha(1-\dfrac{D_{T}(x)}{d_{th}})}, &
+                                               \text{if } D_{T}(x) < d_{th}\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Undefined control sequence.
+l.56 ...alpha(1-\dfrac{D_{T}(x)}{d_{th}})}, &\text
+                                                  {if } D_{T}(x) < d_{th}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.57 &
+      0 &\text{otherwise}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.57 &0 &
+         \text{otherwise}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Undefined control sequence.
+l.57 &0 &\text
+              {otherwise}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \begin{equation} on input line 53 ended by \end{aligned}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58 \end{aligned}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (217.89064pt too wide) detected at line 60
+\OML/cmm/m/it/10 c\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = []
+ []
 
 Missing character: There is no w in font nullfont!
 Missing character: There is no h in font nullfont!
@@ -7981,32 +8068,27 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 55--56
-[]
+Overfull \hbox (28.07188pt too wide) in paragraph at lines 60--62
+ $\OML/cmm/m/it/10 D[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )$
  []
 
 
-Overfull \hbox (28.07188pt too wide) in paragraph at lines 55--56
-\OML/cmm/m/it/10 D[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )$
- []
-
-
-Overfull \hbox (13.40746pt too wide) in paragraph at lines 55--56
+Overfull \hbox (13.40746pt too wide) in paragraph at lines 60--62
 \OML/cmm/m/it/10 d[]$
  []
 
 
-Overfull \hbox (13.40746pt too wide) in paragraph at lines 55--56
+Overfull \hbox (13.40746pt too wide) in paragraph at lines 60--62
 \OML/cmm/m/it/10 d[]$
  []
 
 
-Overfull \hbox (6.43404pt too wide) in paragraph at lines 55--56
+Overfull \hbox (6.43404pt too wide) in paragraph at lines 60--62
 \OML/cmm/m/it/10 $
  []
 
 ! Undefined control sequence.
-l.57 \section
+l.63 \section
              {Training}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8021,7 +8103,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.57 \section{T
+l.63 \section{T
                raining}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -8490,17 +8572,17 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 57--61
+Overfull \hbox (20.0pt too wide) in paragraph at lines 63--67
 []
  []
 
 
-Overfull \hbox (2.77779pt too wide) in paragraph at lines 57--61
+Overfull \hbox (2.77779pt too wide) in paragraph at lines 63--67
 \OT1/cmr/m/n/10 '
  []
 
 ! Undefined control sequence.
-l.62 \section
+l.68 \section
              {Prediction}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8515,7 +8597,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.62 \section{P
+l.68 \section{P
                rediction}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -8585,12 +8667,12 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 62--64
+Overfull \hbox (20.0pt too wide) in paragraph at lines 68--70
 []
  []
 
 ! Undefined control sequence.
-l.65 \section
+l.71 \section
              {Implementation Details}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8605,7 +8687,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.65 \section{I
+l.71 \section{I
                mplementation Details}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -8632,7 +8714,7 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no s in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 65--66
+Overfull \hbox (20.0pt too wide) in paragraph at lines 71--72
 []
  []
 
@@ -8643,7 +8725,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.67 W
+l.73 W
       e train our network on Leonhard cluster. Since we have limited memory ...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -8854,7 +8936,7 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no t in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 67--75
+Overfull \hbox (20.0pt too wide) in paragraph at lines 73--81
 []
  []
 
@@ -8867,10 +8949,10 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 67--75
  
 Here is how much of TeX's memory you used:
  12 strings out of 492649
- 220 string characters out of 6129621
+ 221 string characters out of 6129621
  61655 words of memory out of 5000000
  3994 multiletter control sequences out of 15000+600000
  3948 words of font info for 15 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 20i,3n,27p,1345b,92s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 20i,4n,27p,1345b,92s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!

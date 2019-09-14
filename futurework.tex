@@ -1,26 +1,25 @@
 \chapter{Limitations and Future Work}
 
-Dummy text.
+There are a lot of limitations on our current work and a lot of potential work in the future. In this chapter, we summarize the limitations in our work from our model to the datasets, and state possible future work to get a better result in real-time image-based camera localization.
 
-\section{SIXD}
+\section{Network}
+Since our model learns to predict 2D projections of 3D bounding box from limited training data, sometimes it cannot generalize well to objects in new or unusually perspective of views. For example, in our testing data for couch, the result of predicting from back of the couch is not as good as the prediction from the front view.
+
+Our loss function also does not distinguish the error of predicted 2D points and ground truth in small 3D bounding box versus large 3D bounding box. A small error in a large box is generally negligible but the same error in a small box has a much greater effect on the result or IOU. Thus, further improvement on the loss function is possible.
+
+\section{Datasets}
+\subsection{SIXD}
 \label{sec:SIXD}
 Although SIXD tollkit can help us generate quite a lot different views of the object in random textures, the views we generated are still not realistic enough.
 
 To adress these limitations, one of the future work we can do is to adjust the initial orientation of the 3D object model so that most of the camera views have a fixed upright direction aligned to z=1. Also, automatically filtering out some unrealistic views such as the view from the bottom of the object is also necessary. Since in real indoor environment, we rarely see the furniture from a view to the bottom of it. The random background utilized should better be of indoor environments containing recognizable furnitures. And if possible, it would be great if the floor can be detected and put the object onto floor level so that it is not obviously floating in the air.
 
-\section{SunCG}
+\subsection{SunCG}
 random texture, random x scale
 other objects
 
 predict multiple classes
 
-\subsection{Example Subsection}
-
-Dummy text.
-
-\subsubsection{Example Subsubsection}
-
-Dummy text.
 
 \paragraph{Example Paragraph}
 
