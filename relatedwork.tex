@@ -6,23 +6,22 @@ In this chapter we review the existing works on camera localization from classic
 
 \subsection{Classical methods}
 
-Traditional RGB object instance recognition and pose estimation works are mainly local feature extraction and mapping.
+Traditional camera pose estimation works \cite{irschara2009structure, lim2015real, lynen2015get, zeisl2015camera, sattler2016efficient} are mainly using local feature extraction and mapping. Most common approach to image-based localization is structure-based and tackles the problem by first matching the local 2D features of an image to the 3D point cloud model of the scene. Local descriptors needed by such methods were designed for invariance to changes in scale, rotation, illumination and viewpoints. Recent improvements has made these methods quite robust and accurate.
+
+Recently, a privacy preserving image-based localization method \cite{speciale2019privacy} is proposed by lifting the map representation from a 3D point cloud to a 3D line cloud, which obfuscates the underlying scene geometry while providing sufficient geometric constraints to enable robust and accurate 6D camera pose estimation.
 
 \subsection{CNN-based methods}
-There are some CNN-based end-to-end camera pose prediction methods.
+There are some CNN-based end-to-end camera pose prediction methods. \cite{wu2017delving} predicts the orientation and translation of a camera given only a single picture. However, this approach is solving camera relocalization problem, and it can only predict in the same scene that the training period learnt. While this approach is useful in many robotic applications such as navigation and Simultaneous Localization and Mapping (SLAM), it cannot be generalised to a camera localization problem in a new/unseen scene. 
+
+In a recent image-based localization work using LSTMs for structured feature correlation \cite{walch2017image}, the authors propose a new CNN plus LSTM architecture for camera pose regression for indoor and outdoor scenes. In this approach, they use CNN to learn feature representations for localization, and use LSTM units to reduce structured dimensionality on the feature vector of the CNN output.
 
 \section{Object detection based methods}
 Camera location can also be computed from 6D object pose. 6D object pose detection approaches are mostly based on object detection means. Here we review related works from the initial R-CNN based object detection methods to the latest single shot 6D object pose detection method.
 
 \subsection{Object detection}
 
-\paragraph{R-CNN and further methods}
-propose various locations and regions 
-
-\paragraph{SSD}
-
 \paragraph{YOLO}
-YOLO is a rael-time single shot object detection approach and is proposed in the same time as SSD. Most of the works for object detection before YOLO have a first step to propose possible regions of the object, and then do the classification and refinement. The multiple stages make the model hard to optimize since each component must be trained separately. The post-processing step also makes the training and prediction rather slow.
+YOLO is a real-time single shot object detection approach and is proposed in the same time as SSD. Most of the works for object detection before YOLO have a first step to propose possible regions of the object, and then do the classification and refinement. The multiple stages make the model hard to optimize since each component must be trained separately. The post-processing step also makes the training and prediction rather slow.
 
 YOLO  frame object detection as a regression problem instead of the previous classification problem. Instead of doing classification on a proposed region, YOLO can predict the location of the bounding boxes of the object directly. Given a full image, YOLO use a single network to predict all bounding boxes across all classes for the image simultaneously in one evaluation. Thus, YOLO realizes a single shot, end-to-end trainable network for object detection task.
 

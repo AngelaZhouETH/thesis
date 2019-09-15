@@ -7,11 +7,31 @@ Eric Brachmann, Alexander Krull, Sebastian Nowozin, Jamie Shotton, Frank
 \newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
   Pattern Recognition}, pages 6684--6692, 2017.
 
+\bibitem{dai2017scannet}
+Angela Dai, Angel~X Chang, Manolis Savva, Maciej Halber, Thomas Funkhouser, and
+  Matthias Nie{\ss}ner.
+\newblock Scannet: Richly-annotated 3d reconstructions of indoor scenes.
+\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}, pages 5828--5839, 2017.
+
 \bibitem{glocker2013real}
 Ben Glocker, Shahram Izadi, Jamie Shotton, and Antonio Criminisi.
 \newblock Real-time rgb-d camera relocalization.
 \newblock In {\em 2013 IEEE International Symposium on Mixed and Augmented
   Reality (ISMAR)}, pages 173--179. IEEE, 2013.
+
+\bibitem{hodan2018bop}
+Tomas Hodan, Frank Michel, Eric Brachmann, Wadim Kehl, Anders GlentBuch, Dirk
+  Kraft, Bertram Drost, Joel Vidal, Stephan Ihrke, Xenophon Zabulis, et~al.
+\newblock Bop: Benchmark for 6d object pose estimation.
+\newblock In {\em Proceedings of the European Conference on Computer Vision
+  (ECCV)}, pages 19--34, 2018.
+
+\bibitem{irschara2009structure}
+Arnold Irschara, Christopher Zach, Jan-Michael Frahm, and Horst Bischof.
+\newblock From structure-from-motion point clouds to fast location recognition.
+\newblock In {\em 2009 IEEE Conference on Computer Vision and Pattern
+  Recognition}, pages 2599--2606. IEEE, 2009.
 
 \bibitem{kehl2017ssd}
 Wadim Kehl, Fabian Manhardt, Federico Tombari, Slobodan Ilic, and Nassir Navab.
@@ -24,6 +44,19 @@ Wadim Kehl, Fabian Manhardt, Federico Tombari, Slobodan Ilic, and Nassir Navab.
 Vincent Lepetit, Francesc Moreno-Noguer, and Pascal Fua.
 \newblock Epnp: An accurate o (n) solution to the pnp problem.
 \newblock {\em International journal of computer vision}, 81(2):155, 2009.
+
+\bibitem{lim2015real}
+Hyon Lim, Sudipta~N Sinha, Michael~F Cohen, Matt Uyttendaele, and H~Jin Kim.
+\newblock Real-time monocular image-based 6-dof localization.
+\newblock {\em The International Journal of Robotics Research},
+  34(4-5):476--492, 2015.
+
+\bibitem{lynen2015get}
+Simon Lynen, Torsten Sattler, Michael Bosse, Joel~A Hesch, Marc Pollefeys, and
+  Roland Siegwart.
+\newblock Get out of my lab: Large-scale, real-time visual-inertial
+  localization.
+\newblock In {\em Robotics: Science and Systems}, volume~1, 2015.
 
 \bibitem{Silberman:ECCV12}
 Pushmeet~Kohli Nathan~Silberman, Derek~Hoiem and Rob Fergus.
@@ -43,6 +76,13 @@ Joseph Redmon, Santosh Divvala, Ross Girshick, and Ali Farhadi.
 \newblock In {\em Proceedings of the IEEE conference on computer vision and
   pattern recognition}, pages 779--788, 2016.
 
+\bibitem{sattler2016efficient}
+Torsten Sattler, Bastian Leibe, and Leif Kobbelt.
+\newblock Efficient \& effective prioritized matching for large-scale
+  image-based localization.
+\newblock {\em IEEE transactions on pattern analysis and machine intelligence},
+  39(9):1744--1756, 2016.
+
 \bibitem{shotton2013scene}
 Jamie Shotton, Ben Glocker, Christopher Zach, Shahram Izadi, Antonio Criminisi,
   and Andrew Fitzgibbon.
@@ -51,11 +91,32 @@ Jamie Shotton, Ben Glocker, Christopher Zach, Shahram Izadi, Antonio Criminisi,
 \newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
   Pattern Recognition}, pages 2930--2937, 2013.
 
+\bibitem{song2016ssc}
+Shuran Song, Fisher Yu, Andy Zeng, Angel~X Chang, Manolis Savva, and Thomas
+  Funkhouser.
+\newblock Semantic scene completion from a single depth image.
+\newblock {\em Proceedings of 30th IEEE Conference on Computer Vision and
+  Pattern Recognition}, 2017.
+
+\bibitem{speciale2019privacy}
+Pablo Speciale, Johannes~Lutz Sch\"{o}nberger, , Sudipta Sinha, and Marc
+  Pollefeys.
+\newblock {Privacy Preserving Image Queries for Camera Localization}.
+\newblock In {\em International Conference on Computer Vision (ICCV)}, 2019.
+
 \bibitem{tekin2018real}
 Bugra Tekin, Sudipta~N Sinha, and Pascal Fua.
 \newblock Real-time seamless single shot 6d object pose prediction.
 \newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
   Pattern Recognition}, pages 292--301, 2018.
+
+\bibitem{walch2017image}
+Florian Walch, Caner Hazirbas, Laura Leal-Taixe, Torsten Sattler, Sebastian
+  Hilsenbeck, and Daniel Cremers.
+\newblock Image-based localization using lstms for structured feature
+  correlation.
+\newblock In {\em Proceedings of the IEEE International Conference on Computer
+  Vision}, pages 627--637, 2017.
 
 \bibitem{wu2017delving}
 Jian Wu, Liwei Ma, and Xiaolin Hu.
@@ -69,5 +130,11 @@ Yihong Wu, Fulin Tang, and Heping Li.
 \newblock Image-based camera localization: an overview.
 \newblock {\em Visual Computing for Industry, Biomedicine, and Art},
   1(1):1--13, 2018.
+
+\bibitem{zeisl2015camera}
+Bernhard Zeisl, Torsten Sattler, and Marc Pollefeys.
+\newblock Camera pose voting for large-scale image-based localization.
+\newblock In {\em Proceedings of the IEEE International Conference on Computer
+  Vision}, pages 2704--2712, 2015.
 
 \end{thebibliography}

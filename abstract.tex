@@ -1,6 +1,7 @@
 \begin{abstract}
-  great and wide applications in augmented reality, virtual reality, robotics, autonomous driving
-
+  Nowadays, camera localization has great and wide applications in augmented reality, virtual reality, robotics, and autonomous driving areas.
   
-   We perform experiments on the synthetic SUNCG dataset and the recently released ScanNetv2 dataset
+  In this work we propose a single shot image-based camera localization method for indoor scenes. Inspired by the recent single shot imaged-based 6D object detection work, we come up with the idea to estimates camera pose through 6D pose detection for the common indoor objects. Our network is modified from YOLO v2 architecture to predict the coordinates of 2D projections of the object's 3D bounding box instead of a 2D bounding box. We then use a PnP algorithm to compute the camera pose according to the locations of the corresponding 2D and 3D control points. Our network is end-to-end trainable and robust to motion blur and occlusion.
+  
+   Furthermore, we have generated labels and perform experiments on multiple datasets including synthetic dataset e.g. SunCG and real dataset ScanNet. We aim to realize robust and real-time camera localization in real indoor images.
 \end{abstract}

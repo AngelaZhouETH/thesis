@@ -19,18 +19,10 @@ To adress these limitations, one of the future work we can do is to adjust the i
 
 \subsection{SunCG}
 
-For SunCG dataset, we have quite a lot possible future work to do. In our work, we only generated training and testing images for sofa object in SunCG scenes. We can generate more categories objects and realize multiple categories object 6D pose prediction. We can also randomize textures of the objects during rendering so that we can have objects in more variety of textures in our training data. Since in real life there is no absolutely same objects as in synthetic scenes, we can randomize per axis scaling to generate objects in different shapes. This idea can be used in data augmentation procedure. In this way, we can generate more realistic scenes with different shapes objects in the same category.
+For SunCG dataset, we have quite a lot possible future work to do. In our work, we only generated training and testing images for sofa object in SunCG scenes and now we do only single object detection. In the future, we can first enable multiple objects detection in same category for each image. Then we can generate more categories objects and realize multiple categories object 6D pose prediction. We can also randomize textures of the objects during rendering so that we can have objects in more variety of textures in our training data. Since in real life there is no absolutely same objects as in synthetic scenes, we can randomize per axis scaling to generate objects in different shapes. This idea can be used in data augmentation procedure. In this way, we can generate more realistic scenes with different shapes objects in the same category.
 
+\subsection{ScanNet}
 
-\paragraph{Example Paragraph}
+For ScanNet dataset, there are mainly two directions for future work. First of all, increase the size of the training data. Now we are using 264 scenes and 565 scans for our experiments by the time we write this report. ScanNet has in total more than 1500 scans, which means using the whole dataset can enlarge our current training and testing data to 3 times of the current size. With more training data, our model can generalize better to test data and to objects in various shapes of the same category. Also, since we have to filter out objects which have the size of their 3D bounding box lying outside the similarity range with our chosen 3D object model, the more data we have, the smaller range we can set to obtain same number of training data. The smaller the range is, the more similar the objects in our images are, and the better accuracy of the predictions our model can achieve.
 
-Dummy text.
-
-\subparagraph{Example Subparagraph}
-
-Dummy text.
-
-
-3D model similar to our specified model
-
- intrinsic parameter
+Secondly, complete reconstruction is a very import factor to the performance of our model. If any new real dataset are being created, more detailed scans and accurate camera intrinsic parameter records can result in a much better reconstruction, which may make our model predicts much more accurate results for camera localization.
