@@ -16,18 +16,19 @@
 \contentsline {subsection}{\numberline {2.1.2}CNN-based methods}{7}{subsection.2.1.2}
 \contentsline {section}{\numberline {2.2}Object detection based methods}{8}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Object detection}{8}{subsection.2.2.1}
-\contentsline {paragraph}{YOLO}{8}{section*.2}
-\contentsline {paragraph}{YOLO v2}{9}{section*.3}
+\contentsline {paragraph}{SSD}{8}{section*.2}
+\contentsline {paragraph}{YOLO}{8}{section*.3}
+\contentsline {paragraph}{YOLO v2}{9}{section*.4}
 \contentsline {subsection}{\numberline {2.2.2}6D object pose detection}{9}{subsection.2.2.2}
-\contentsline {paragraph}{BB8}{9}{section*.4}
-\contentsline {paragraph}{SSD-6D}{9}{section*.5}
-\contentsline {paragraph}{Real-time single shot approach}{9}{section*.6}
+\contentsline {paragraph}{BB8}{9}{section*.5}
+\contentsline {paragraph}{SSD-6D}{9}{section*.6}
+\contentsline {paragraph}{Real-time single shot approach}{10}{section*.7}
 \contentsline {chapter}{\chapternumberline {3}Methodology}{11}{chapter.3}
 \contentsline {section}{\numberline {3.1}Single shot 2D object detection}{11}{section.3.1}
-\contentsline {subsubsection}{Network}{12}{section*.7}
-\contentsline {subsubsection}{Training}{12}{section*.8}
-\contentsline {subsubsection}{Inference}{13}{section*.9}
-\contentsline {subsubsection}{YOLO v2}{13}{section*.10}
+\contentsline {subsubsection}{Network}{12}{section*.8}
+\contentsline {subsubsection}{Training}{12}{section*.9}
+\contentsline {subsubsection}{Inference}{13}{section*.10}
+\contentsline {subsubsection}{YOLO v2}{13}{section*.11}
 \contentsline {section}{\numberline {3.2}Model}{14}{section.3.2}
 \contentsline {section}{\numberline {3.3}Training}{16}{section.3.3}
 \contentsline {section}{\numberline {3.4}Prediction}{16}{section.3.4}
@@ -35,16 +36,16 @@
 \contentsline {chapter}{\chapternumberline {4}Datasets}{19}{chapter.4}
 \contentsline {section}{\numberline {4.1}Dataset types}{19}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Synthetic data}{19}{subsection.4.1.1}
-\contentsline {subsubsection}{SIXD Toolkit}{19}{section*.13}
-\contentsline {subsubsection}{SunCG}{20}{section*.16}
+\contentsline {subsubsection}{SIXD Toolkit}{19}{section*.14}
+\contentsline {subsubsection}{SunCG}{20}{section*.17}
 \contentsline {subsection}{\numberline {4.1.2}Real data}{20}{subsection.4.1.2}
-\contentsline {subsubsection}{NYU-Depth}{20}{section*.18}
-\contentsline {subsubsection}{7-Scenes}{24}{section*.19}
-\contentsline {subsubsection}{ScanNet}{24}{section*.20}
-\contentsline {paragraph}{limitations of ScanNet}{25}{section*.21}
+\contentsline {subsubsection}{NYU-Depth}{20}{section*.19}
+\contentsline {subsubsection}{7-Scenes}{24}{section*.20}
+\contentsline {subsubsection}{ScanNet}{24}{section*.21}
+\contentsline {paragraph}{limitations of ScanNet}{25}{section*.22}
 \contentsline {section}{\numberline {4.2}Dataset processing}{27}{section.4.2}
-\contentsline {paragraph}{Order of corners}{27}{section*.25}
-\contentsline {paragraph}{Data filtering}{28}{section*.26}
+\contentsline {paragraph}{Order of corners}{27}{section*.26}
+\contentsline {paragraph}{Data filtering}{28}{section*.27}
 \contentsline {chapter}{\chapternumberline {5}Experiments and Results}{31}{chapter.5}
 \contentsline {section}{\numberline {5.1}Synthetic Data}{31}{section.5.1}
 \contentsline {section}{\numberline {5.2}Real Data}{32}{section.5.2}
@@ -54,4 +55,4 @@
 \contentsline {subsection}{\numberline {6.2.1}SIXD}{40}{subsection.6.2.1}
 \contentsline {subsection}{\numberline {6.2.2}SunCG}{40}{subsection.6.2.2}
 \contentsline {subsection}{\numberline {6.2.3}ScanNet}{40}{subsection.6.2.3}
-\contentsline {chapter}{Bibliography}{43}{chapter*.34}
+\contentsline {chapter}{Bibliography}{43}{chapter*.35}

@@ -20,6 +20,9 @@ Camera location can also be computed from 6D object pose. 6D object pose detecti
 
 \subsection{Object detection}
 
+\paragraph{SSD}
+SSD \cite{liu2016ssd} detects objects in images using a single deep neural network. The model discretizes the output space of bounding boxes into a set of default boxes over different aspect ratios and scales per feature map location. SSD is easy to train and straightforward to integrate into systems that require a detection component relative to methods that require object proposals. Prior to SSD, object detection methods such as R-CNN related methods \cite{girshick2014rich, girshick2015fast, ren2015faster} are basically in multiple stages including object proposal generation and subsequent pixel or feature resampling.
+
 \paragraph{YOLO}
 YOLO is a real-time single shot object detection approach and is proposed in the same time as SSD. Most of the works for object detection before YOLO have a first step to propose possible regions of the object, and then do the classification and refinement. The multiple stages make the model hard to optimize since each component must be trained separately. The post-processing step also makes the training and prediction rather slow.
 
