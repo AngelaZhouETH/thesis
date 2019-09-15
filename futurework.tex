@@ -18,10 +18,8 @@ Although SIXD tollkit can help us generate quite a lot different views of the ob
 To adress these limitations, one of the future work we can do is to adjust the initial orientation of the 3D object model so that most of the camera views have a fixed upright direction aligned to z=1. Also, automatically filtering out some unrealistic views such as the view from the bottom of the object is also necessary. Since in real indoor environment, we rarely see the furniture from a view to the bottom of it. The random background utilized should better be of indoor environments containing recognizable furnitures. And if possible, it would be great if the floor can be detected and put the object onto floor level so that it is not obviously floating in the air.
 
 \subsection{SunCG}
-random texture, random x scale
-other objects
 
-predict multiple classes
+For SunCG dataset, we have quite a lot possible future work to do. In our work, we only generated training and testing images for sofa object in SunCG scenes. We can generate more categories objects and realize multiple categories object 6D pose prediction. We can also randomize textures of the objects during rendering so that we can have objects in more variety of textures in our training data. Since in real life there is no absolutely same objects as in synthetic scenes, we can randomize per axis scaling to generate objects in different shapes. This idea can be used in data augmentation procedure. In this way, we can generate more realistic scenes with different shapes objects in the same category.
 
 
 \paragraph{Example Paragraph}
