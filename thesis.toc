@@ -48,16 +48,11 @@
 \contentsline {paragraph}{Order of corners}{26}{section*.24}
 \contentsline {paragraph}{Data filtering}{26}{section*.25}
 \contentsline {chapter}{\chapternumberline {5}Experiments and Results}{29}{chapter.5}
-\contentsline {section}{\numberline {5.1}Example Section}{29}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Example Subsection}{29}{subsection.5.1.1}
-\contentsline {subsubsection}{Example Subsubsection}{29}{section*.26}
-\contentsline {paragraph}{Example Paragraph}{29}{section*.27}
-\contentsline {subparagraph}{Example Subparagraph}{29}{section*.28}
-\contentsline {chapter}{\chapternumberline {6}Limitations and Future Work}{31}{chapter.6}
-\contentsline {section}{\numberline {6.1}Network}{31}{section.6.1}
-\contentsline {section}{\numberline {6.2}Datasets}{31}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}SIXD}{31}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}SunCG}{32}{subsection.6.2.2}
-\contentsline {paragraph}{Example Paragraph}{32}{section*.29}
-\contentsline {subparagraph}{Example Subparagraph}{32}{section*.30}
-\contentsline {chapter}{Bibliography}{33}{chapter*.31}
+\contentsline {chapter}{\chapternumberline {6}Limitations and Future Work}{33}{chapter.6}
+\contentsline {section}{\numberline {6.1}Network}{33}{section.6.1}
+\contentsline {section}{\numberline {6.2}Datasets}{33}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}SIXD}{33}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}SunCG}{34}{subsection.6.2.2}
+\contentsline {paragraph}{Example Paragraph}{34}{section*.29}
+\contentsline {subparagraph}{Example Subparagraph}{34}{section*.30}
+\contentsline {chapter}{Bibliography}{35}{chapter*.31}
