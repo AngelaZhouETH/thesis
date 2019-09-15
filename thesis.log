@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.13)  15 SEP 2019 09:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.13)  15 SEP 2019 13:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1756,320 +1756,493 @@ Underfull \vbox (badness 1057) has occurred while \output is active []
 [25] [26]) (./experiments.tex [27] [28
 
 ]
-<./images/results/couch/scene0024_02_2776.jpg, id=473, 462.528pt x 346.896pt>
+<./images/results/couch/scene0024_02_2776.jpg, id=474, 462.528pt x 346.896pt>
 File: ./images/results/couch/scene0024_02_2776.jpg Graphic file (type jpg)
 <use ./images/results/couch/scene0024_02_2776.jpg>
 Package pdftex.def Info: ./images/results/couch/scene0024_02_2776.jpg  used on 
-input line 5.
+input line 10.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch/scene0025_00_516.jpg, id=474, 462.528pt x 346.896pt>
+<./images/results/couch/scene0025_00_516.jpg, id=475, 462.528pt x 346.896pt>
 File: ./images/results/couch/scene0025_00_516.jpg Graphic file (type jpg)
 <use ./images/results/couch/scene0025_00_516.jpg>
 Package pdftex.def Info: ./images/results/couch/scene0025_00_516.jpg  used on i
-nput line 8.
+nput line 13.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch/scene0025_01_516.jpg, id=475, 462.528pt x 346.896pt>
+<./images/results/couch/scene0025_01_516.jpg, id=476, 462.528pt x 346.896pt>
 File: ./images/results/couch/scene0025_01_516.jpg Graphic file (type jpg)
 <use ./images/results/couch/scene0025_01_516.jpg>
 Package pdftex.def Info: ./images/results/couch/scene0025_01_516.jpg  used on i
-nput line 11.
+nput line 16.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch/scene0199_00_762.jpg, id=476, 462.528pt x 346.896pt>
+<./images/results/couch/scene0199_00_762.jpg, id=477, 462.528pt x 346.896pt>
 File: ./images/results/couch/scene0199_00_762.jpg Graphic file (type jpg)
 <use ./images/results/couch/scene0199_00_762.jpg>
 Package pdftex.def Info: ./images/results/couch/scene0199_00_762.jpg  used on i
-nput line 14.
+nput line 19.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch/scene0031_00_877.jpg, id=477, 462.528pt x 346.896pt>
+<./images/results/couch/scene0031_00_877.jpg, id=478, 462.528pt x 346.896pt>
 File: ./images/results/couch/scene0031_00_877.jpg Graphic file (type jpg)
 <use ./images/results/couch/scene0031_00_877.jpg>
 Package pdftex.def Info: ./images/results/couch/scene0031_00_877.jpg  used on i
-nput line 17.
+nput line 22.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch/scene0031_00_1644.jpg, id=478, 462.528pt x 346.896pt>
+<./images/results/couch/scene0031_00_1644.jpg, id=479, 462.528pt x 346.896pt>
 File: ./images/results/couch/scene0031_00_1644.jpg Graphic file (type jpg)
 <use ./images/results/couch/scene0031_00_1644.jpg>
 Package pdftex.def Info: ./images/results/couch/scene0031_00_1644.jpg  used on 
-input line 20.
+input line 25.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch/scene0031_00_1900.jpg, id=479, 462.528pt x 346.896pt>
+<./images/results/couch/scene0031_00_1900.jpg, id=480, 462.528pt x 346.896pt>
 File: ./images/results/couch/scene0031_00_1900.jpg Graphic file (type jpg)
 <use ./images/results/couch/scene0031_00_1900.jpg>
 Package pdftex.def Info: ./images/results/couch/scene0031_00_1900.jpg  used on 
-input line 23.
+input line 28.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch/scene0199_00_1471.jpg, id=480, 462.528pt x 346.896pt>
+<./images/results/couch/scene0199_00_1471.jpg, id=481, 462.528pt x 346.896pt>
 File: ./images/results/couch/scene0199_00_1471.jpg Graphic file (type jpg)
 <use ./images/results/couch/scene0199_00_1471.jpg>
 Package pdftex.def Info: ./images/results/couch/scene0199_00_1471.jpg  used on 
-input line 26.
+input line 31.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch/scene0064_00_80.jpg, id=481, 462.528pt x 346.896pt>
+<./images/results/couch/scene0064_00_80.jpg, id=482, 462.528pt x 346.896pt>
 File: ./images/results/couch/scene0064_00_80.jpg Graphic file (type jpg)
 <use ./images/results/couch/scene0064_00_80.jpg>
 Package pdftex.def Info: ./images/results/couch/scene0064_00_80.jpg  used on in
-put line 29.
+put line 34.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch/scene0031_01_565.jpg, id=482, 462.528pt x 346.896pt>
+<./images/results/couch/scene0031_01_565.jpg, id=483, 462.528pt x 346.896pt>
 File: ./images/results/couch/scene0031_01_565.jpg Graphic file (type jpg)
 <use ./images/results/couch/scene0031_01_565.jpg>
 Package pdftex.def Info: ./images/results/couch/scene0031_01_565.jpg  used on i
-nput line 32.
+nput line 37.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch/scene0031_01_2147.jpg, id=483, 462.528pt x 346.896pt>
+<./images/results/couch/scene0031_01_2147.jpg, id=484, 462.528pt x 346.896pt>
 File: ./images/results/couch/scene0031_01_2147.jpg Graphic file (type jpg)
 <use ./images/results/couch/scene0031_01_2147.jpg>
 Package pdftex.def Info: ./images/results/couch/scene0031_01_2147.jpg  used on 
-input line 35.
+input line 40.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch/scene0031_02_1702.jpg, id=484, 462.528pt x 346.896pt>
+<./images/results/couch/scene0031_02_1702.jpg, id=485, 462.528pt x 346.896pt>
 File: ./images/results/couch/scene0031_02_1702.jpg Graphic file (type jpg)
 <use ./images/results/couch/scene0031_02_1702.jpg>
 Package pdftex.def Info: ./images/results/couch/scene0031_02_1702.jpg  used on 
-input line 38.
+input line 43.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch/scene0050_02_4364.jpg, id=485, 462.528pt x 346.896pt>
+<./images/results/couch/scene0050_02_4364.jpg, id=486, 462.528pt x 346.896pt>
 File: ./images/results/couch/scene0050_02_4364.jpg Graphic file (type jpg)
 <use ./images/results/couch/scene0050_02_4364.jpg>
 Package pdftex.def Info: ./images/results/couch/scene0050_02_4364.jpg  used on 
-input line 41.
+input line 46.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch/scene0054_00_1691.jpg, id=486, 462.528pt x 346.896pt>
+<./images/results/couch/scene0054_00_1691.jpg, id=487, 462.528pt x 346.896pt>
 File: ./images/results/couch/scene0054_00_1691.jpg Graphic file (type jpg)
 <use ./images/results/couch/scene0054_00_1691.jpg>
 Package pdftex.def Info: ./images/results/couch/scene0054_00_1691.jpg  used on 
-input line 44.
+input line 49.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch/scene0203_02_319.jpg, id=487, 462.528pt x 346.896pt>
+<./images/results/couch/scene0203_02_319.jpg, id=488, 462.528pt x 346.896pt>
 File: ./images/results/couch/scene0203_02_319.jpg Graphic file (type jpg)
 <use ./images/results/couch/scene0203_02_319.jpg>
 Package pdftex.def Info: ./images/results/couch/scene0203_02_319.jpg  used on i
-nput line 47.
+nput line 52.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./images/results/couch_gt_err/scene0203_02_941.jpg, id=488, 462.528pt x 346.89
+[29]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [30 <./images/results/couch/scene0024_02_2776.jpg> <./images/results/couch/sce
+ne0025_00_516.jpg> <./images/results/couch/scene0025_01_516.jpg> <./images/resu
+lts/couch/scene0199_00_762.jpg> <./images/results/couch/scene0031_00_877.jpg> <
+./images/results/couch/scene0031_00_1644.jpg> <./images/results/couch/scene0031
+_00_1900.jpg> <./images/results/couch/scene0199_00_1471.jpg> <./images/results/
+couch/scene0064_00_80.jpg> <./images/results/couch/scene0031_01_565.jpg> <./ima
+ges/results/couch/scene0031_01_2147.jpg> <./images/results/couch/scene0031_02_1
+702.jpg> <./images/results/couch/scene0050_02_4364.jpg> <./images/results/couch
+/scene0054_00_1691.jpg> <./images/results/couch/scene0203_02_319.jpg>]
+<./images/results/couch_gt_err/scene0203_02_941.jpg, id=500, 462.528pt x 346.89
 6pt>
 File: ./images/results/couch_gt_err/scene0203_02_941.jpg Graphic file (type jpg
 )
 <use ./images/results/couch_gt_err/scene0203_02_941.jpg>
 Package pdftex.def Info: ./images/results/couch_gt_err/scene0203_02_941.jpg  us
-ed on input line 56.
+ed on input line 63.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch_gt_err/scene0203_01_774.jpg, id=489, 462.528pt x 346.89
+<./images/results/couch_gt_err/scene0203_01_774.jpg, id=501, 462.528pt x 346.89
 6pt>
 File: ./images/results/couch_gt_err/scene0203_01_774.jpg Graphic file (type jpg
 )
 <use ./images/results/couch_gt_err/scene0203_01_774.jpg>
 Package pdftex.def Info: ./images/results/couch_gt_err/scene0203_01_774.jpg  us
-ed on input line 59.
+ed on input line 66.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch_gt_err/scene0031_00_2361.jpg, id=490, 462.528pt x 346.8
+<./images/results/couch_gt_err/scene0031_00_2361.jpg, id=502, 462.528pt x 346.8
 96pt>
 File: ./images/results/couch_gt_err/scene0031_00_2361.jpg Graphic file (type jp
 g)
 <use ./images/results/couch_gt_err/scene0031_00_2361.jpg>
 Package pdftex.def Info: ./images/results/couch_gt_err/scene0031_00_2361.jpg  u
-sed on input line 62.
+sed on input line 69.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch_gt_err/scene0031_01_1938.jpg, id=491, 462.528pt x 346.8
+<./images/results/couch_gt_err/scene0031_01_1938.jpg, id=503, 462.528pt x 346.8
 96pt>
 File: ./images/results/couch_gt_err/scene0031_01_1938.jpg Graphic file (type jp
 g)
 <use ./images/results/couch_gt_err/scene0031_01_1938.jpg>
 Package pdftex.def Info: ./images/results/couch_gt_err/scene0031_01_1938.jpg  u
-sed on input line 65.
+sed on input line 72.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch_gt_err/scene0049_00_192.jpg, id=492, 462.528pt x 346.89
+<./images/results/couch_gt_err/scene0049_00_192.jpg, id=504, 462.528pt x 346.89
 6pt>
 File: ./images/results/couch_gt_err/scene0049_00_192.jpg Graphic file (type jpg
 )
 <use ./images/results/couch_gt_err/scene0049_00_192.jpg>
 Package pdftex.def Info: ./images/results/couch_gt_err/scene0049_00_192.jpg  us
-ed on input line 68.
+ed on input line 75.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch_gt_err/scene0064_00_319.jpg, id=493, 462.528pt x 346.89
+<./images/results/couch_gt_err/scene0064_00_319.jpg, id=505, 462.528pt x 346.89
 6pt>
 File: ./images/results/couch_gt_err/scene0064_00_319.jpg Graphic file (type jpg
 )
 <use ./images/results/couch_gt_err/scene0064_00_319.jpg>
 Package pdftex.def Info: ./images/results/couch_gt_err/scene0064_00_319.jpg  us
-ed on input line 71.
+ed on input line 78.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch_gt_err/scene0064_00_1022.jpg, id=494, 462.528pt x 346.8
+<./images/results/couch_gt_err/scene0064_00_1022.jpg, id=506, 462.528pt x 346.8
 96pt>
 File: ./images/results/couch_gt_err/scene0064_00_1022.jpg Graphic file (type jp
 g)
 <use ./images/results/couch_gt_err/scene0064_00_1022.jpg>
 Package pdftex.def Info: ./images/results/couch_gt_err/scene0064_00_1022.jpg  u
-sed on input line 74.
+sed on input line 81.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch_gt_err/scene0064_00_1090.jpg, id=495, 462.528pt x 346.8
+<./images/results/couch_gt_err/scene0064_00_1090.jpg, id=507, 462.528pt x 346.8
 96pt>
 File: ./images/results/couch_gt_err/scene0064_00_1090.jpg Graphic file (type jp
 g)
 <use ./images/results/couch_gt_err/scene0064_00_1090.jpg>
 Package pdftex.def Info: ./images/results/couch_gt_err/scene0064_00_1090.jpg  u
-sed on input line 77.
+sed on input line 84.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch_gt_err/scene0132_00_1133.jpg, id=496, 462.528pt x 346.8
+<./images/results/couch_gt_err/scene0132_00_1133.jpg, id=508, 462.528pt x 346.8
 96pt>
 File: ./images/results/couch_gt_err/scene0132_00_1133.jpg Graphic file (type jp
 g)
 <use ./images/results/couch_gt_err/scene0132_00_1133.jpg>
 Package pdftex.def Info: ./images/results/couch_gt_err/scene0132_00_1133.jpg  u
-sed on input line 80.
+sed on input line 87.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch_gt_err/scene0148_00_1090.jpg, id=497, 462.528pt x 346.8
+<./images/results/couch_gt_err/scene0148_00_1090.jpg, id=509, 462.528pt x 346.8
 96pt>
 File: ./images/results/couch_gt_err/scene0148_00_1090.jpg Graphic file (type jp
 g)
 <use ./images/results/couch_gt_err/scene0148_00_1090.jpg>
 Package pdftex.def Info: ./images/results/couch_gt_err/scene0148_00_1090.jpg  u
-sed on input line 83.
+sed on input line 90.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch_gt_err/scene0203_02_1938.jpg, id=498, 462.528pt x 346.8
+<./images/results/couch_gt_err/scene0203_02_1938.jpg, id=510, 462.528pt x 346.8
 96pt>
 File: ./images/results/couch_gt_err/scene0203_02_1938.jpg Graphic file (type jp
 g)
 <use ./images/results/couch_gt_err/scene0203_02_1938.jpg>
 Package pdftex.def Info: ./images/results/couch_gt_err/scene0203_02_1938.jpg  u
-sed on input line 86.
+sed on input line 93.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch_gt_err/scene0031_02_2420.jpg, id=499, 462.528pt x 346.8
+<./images/results/couch_gt_err/scene0031_02_2420.jpg, id=511, 462.528pt x 346.8
 96pt>
 File: ./images/results/couch_gt_err/scene0031_02_2420.jpg Graphic file (type jp
 g)
 <use ./images/results/couch_gt_err/scene0031_02_2420.jpg>
 Package pdftex.def Info: ./images/results/couch_gt_err/scene0031_02_2420.jpg  u
-sed on input line 89.
+sed on input line 96.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<./images/results/couch_err/scene0234_00_368.jpg, id=500, 462.528pt x 346.896pt
+ [31 <./images/results/couch_gt_err/scene0203_02_941.jpg> <./images/results/cou
+ch_gt_err/scene0203_01_774.jpg> <./images/results/couch_gt_err/scene0031_00_236
+1.jpg> <./images/results/couch_gt_err/scene0031_01_1938.jpg> <./images/results/
+couch_gt_err/scene0049_00_192.jpg> <./images/results/couch_gt_err/scene0064_00_
+319.jpg> <./images/results/couch_gt_err/scene0064_00_1022.jpg> <./images/result
+s/couch_gt_err/scene0064_00_1090.jpg> <./images/results/couch_gt_err/scene0132_
+00_1133.jpg> <./images/results/couch_gt_err/scene0148_00_1090.jpg> <./images/re
+sults/couch_gt_err/scene0203_02_1938.jpg> <./images/results/couch_gt_err/scene0
+031_02_2420.jpg>]
+<./images/results/couch_err/scene0234_00_368.jpg, id=519, 462.528pt x 346.896pt
 >
 File: ./images/results/couch_err/scene0234_00_368.jpg Graphic file (type jpg)
 <use ./images/results/couch_err/scene0234_00_368.jpg>
 Package pdftex.def Info: ./images/results/couch_err/scene0234_00_368.jpg  used 
-on input line 99.
+on input line 107.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch_err/scene0031_02_1860.jpg, id=501, 462.528pt x 346.896p
+<./images/results/couch_err/scene0031_02_1860.jpg, id=520, 462.528pt x 346.896p
 t>
 File: ./images/results/couch_err/scene0031_02_1860.jpg Graphic file (type jpg)
 <use ./images/results/couch_err/scene0031_02_1860.jpg>
 Package pdftex.def Info: ./images/results/couch_err/scene0031_02_1860.jpg  used
- on input line 102.
+ on input line 110.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch_err/scene0050_01_993.jpg, id=502, 462.528pt x 346.896pt
+<./images/results/couch_err/scene0050_01_993.jpg, id=521, 462.528pt x 346.896pt
 >
 File: ./images/results/couch_err/scene0050_01_993.jpg Graphic file (type jpg)
 <use ./images/results/couch_err/scene0050_01_993.jpg>
 Package pdftex.def Info: ./images/results/couch_err/scene0050_01_993.jpg  used 
-on input line 105.
+on input line 113.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch_err/scene0064_00_981.jpg, id=503, 462.528pt x 346.896pt
+<./images/results/couch_err/scene0064_00_981.jpg, id=522, 462.528pt x 346.896pt
 >
 File: ./images/results/couch_err/scene0064_00_981.jpg Graphic file (type jpg)
 <use ./images/results/couch_err/scene0064_00_981.jpg>
 Package pdftex.def Info: ./images/results/couch_err/scene0064_00_981.jpg  used 
-on input line 108.
+on input line 116.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch_err/scene0141_02_618.jpg, id=504, 462.528pt x 346.896pt
+<./images/results/couch_err/scene0141_02_618.jpg, id=523, 462.528pt x 346.896pt
 >
 File: ./images/results/couch_err/scene0141_02_618.jpg Graphic file (type jpg)
 <use ./images/results/couch_err/scene0141_02_618.jpg>
 Package pdftex.def Info: ./images/results/couch_err/scene0141_02_618.jpg  used 
-on input line 111.
+on input line 119.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch_err/scene0148_00_565.jpg, id=505, 462.528pt x 346.896pt
+<./images/results/couch_err/scene0148_00_565.jpg, id=524, 462.528pt x 346.896pt
 >
 File: ./images/results/couch_err/scene0148_00_565.jpg Graphic file (type jpg)
 <use ./images/results/couch_err/scene0148_00_565.jpg>
 Package pdftex.def Info: ./images/results/couch_err/scene0148_00_565.jpg  used 
-on input line 114.
+on input line 122.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch_err/scene0148_00_893.jpg, id=506, 462.528pt x 346.896pt
+<./images/results/couch_err/scene0148_00_893.jpg, id=525, 462.528pt x 346.896pt
 >
 File: ./images/results/couch_err/scene0148_00_893.jpg Graphic file (type jpg)
 <use ./images/results/couch_err/scene0148_00_893.jpg>
 Package pdftex.def Info: ./images/results/couch_err/scene0148_00_893.jpg  used 
-on input line 117.
+on input line 125.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch_err/scene0203_00_503.jpg, id=507, 462.528pt x 346.896pt
+<./images/results/couch_err/scene0203_00_503.jpg, id=526, 462.528pt x 346.896pt
 >
 File: ./images/results/couch_err/scene0203_00_503.jpg Graphic file (type jpg)
 <use ./images/results/couch_err/scene0203_00_503.jpg>
 Package pdftex.def Info: ./images/results/couch_err/scene0203_00_503.jpg  used 
-on input line 120.
+on input line 128.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch_err/scene0203_00_608.jpg, id=508, 462.528pt x 346.896pt
+<./images/results/couch_err/scene0203_00_608.jpg, id=527, 462.528pt x 346.896pt
 >
 File: ./images/results/couch_err/scene0203_00_608.jpg Graphic file (type jpg)
 <use ./images/results/couch_err/scene0203_00_608.jpg>
 Package pdftex.def Info: ./images/results/couch_err/scene0203_00_608.jpg  used 
-on input line 123.
+on input line 131.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch_err/scene0203_00_1446.jpg, id=509, 462.528pt x 346.896p
+<./images/results/couch_err/scene0203_00_1446.jpg, id=528, 462.528pt x 346.896p
 t>
 File: ./images/results/couch_err/scene0203_00_1446.jpg Graphic file (type jpg)
 <use ./images/results/couch_err/scene0203_00_1446.jpg>
 Package pdftex.def Info: ./images/results/couch_err/scene0203_00_1446.jpg  used
- on input line 126.
+ on input line 134.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch_err/scene0203_02_336.jpg, id=510, 462.528pt x 346.896pt
+<./images/results/couch_err/scene0203_02_336.jpg, id=529, 462.528pt x 346.896pt
 >
 File: ./images/results/couch_err/scene0203_02_336.jpg Graphic file (type jpg)
 <use ./images/results/couch_err/scene0203_02_336.jpg>
 Package pdftex.def Info: ./images/results/couch_err/scene0203_02_336.jpg  used 
-on input line 129.
+on input line 137.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
-<./images/results/couch_err/scene0203_02_1991.jpg, id=511, 462.528pt x 346.896p
+<./images/results/couch_err/scene0203_02_1991.jpg, id=530, 462.528pt x 346.896p
 t>
 File: ./images/results/couch_err/scene0203_02_1991.jpg Graphic file (type jpg)
 <use ./images/results/couch_err/scene0203_02_1991.jpg>
 Package pdftex.def Info: ./images/results/couch_err/scene0203_02_1991.jpg  used
- on input line 132.
+ on input line 140.
+(pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
+<./images/results/chair/scene0005_01_1152.jpg, id=531, 462.528pt x 346.896pt>
+File: ./images/results/chair/scene0005_01_1152.jpg Graphic file (type jpg)
+<use ./images/results/chair/scene0005_01_1152.jpg>
+Package pdftex.def Info: ./images/results/chair/scene0005_01_1152.jpg  used on 
+input line 149.
+(pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
+<./images/results/chair/scene0006_00_691.jpg, id=532, 462.528pt x 346.896pt>
+File: ./images/results/chair/scene0006_00_691.jpg Graphic file (type jpg)
+<use ./images/results/chair/scene0006_00_691.jpg>
+Package pdftex.def Info: ./images/results/chair/scene0006_00_691.jpg  used on i
+nput line 152.
+(pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
+<./images/results/chair/scene0006_02_2664.jpg, id=533, 462.528pt x 346.896pt>
+File: ./images/results/chair/scene0006_02_2664.jpg Graphic file (type jpg)
+<use ./images/results/chair/scene0006_02_2664.jpg>
+Package pdftex.def Info: ./images/results/chair/scene0006_02_2664.jpg  used on 
+input line 155.
+(pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
+<./images/results/chair/scene0030_00_336.jpg, id=534, 462.528pt x 346.896pt>
+File: ./images/results/chair/scene0030_00_336.jpg Graphic file (type jpg)
+<use ./images/results/chair/scene0030_00_336.jpg>
+Package pdftex.def Info: ./images/results/chair/scene0030_00_336.jpg  used on i
+nput line 158.
+(pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
+<./images/results/chair/scene0030_02_364.jpg, id=535, 462.528pt x 346.896pt>
+File: ./images/results/chair/scene0030_02_364.jpg Graphic file (type jpg)
+<use ./images/results/chair/scene0030_02_364.jpg>
+Package pdftex.def Info: ./images/results/chair/scene0030_02_364.jpg  used on i
+nput line 161.
+(pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
+<./images/results/chair/scene0041_01_243.jpg, id=536, 462.528pt x 346.896pt>
+File: ./images/results/chair/scene0041_01_243.jpg Graphic file (type jpg)
+<use ./images/results/chair/scene0041_01_243.jpg>
+Package pdftex.def Info: ./images/results/chair/scene0041_01_243.jpg  used on i
+nput line 164.
+(pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
+<./images/results/chair/scene0045_01_1384.jpg, id=537, 462.528pt x 346.896pt>
+File: ./images/results/chair/scene0045_01_1384.jpg Graphic file (type jpg)
+<use ./images/results/chair/scene0045_01_1384.jpg>
+Package pdftex.def Info: ./images/results/chair/scene0045_01_1384.jpg  used on 
+input line 167.
+(pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
+<./images/results/chair/scene0056_00_1932.jpg, id=538, 462.528pt x 346.896pt>
+File: ./images/results/chair/scene0056_00_1932.jpg Graphic file (type jpg)
+<use ./images/results/chair/scene0056_00_1932.jpg>
+Package pdftex.def Info: ./images/results/chair/scene0056_00_1932.jpg  used on 
+input line 170.
+(pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
+<./images/results/chair/scene0127_00_516.jpg, id=539, 462.528pt x 346.896pt>
+File: ./images/results/chair/scene0127_00_516.jpg Graphic file (type jpg)
+<use ./images/results/chair/scene0127_00_516.jpg>
+Package pdftex.def Info: ./images/results/chair/scene0127_00_516.jpg  used on i
+nput line 173.
+(pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
+<./images/results/chair/scene0131_01_762.jpg, id=540, 462.528pt x 346.896pt>
+File: ./images/results/chair/scene0131_01_762.jpg Graphic file (type jpg)
+<use ./images/results/chair/scene0131_01_762.jpg>
+Package pdftex.def Info: ./images/results/chair/scene0131_01_762.jpg  used on i
+nput line 176.
+(pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
+<./images/results/chair/scene0131_01_877.jpg, id=541, 462.528pt x 346.896pt>
+File: ./images/results/chair/scene0131_01_877.jpg Graphic file (type jpg)
+<use ./images/results/chair/scene0131_01_877.jpg>
+Package pdftex.def Info: ./images/results/chair/scene0131_01_877.jpg  used on i
+nput line 179.
+(pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
+<./images/results/chair/scene0138_00_119.jpg, id=542, 462.528pt x 346.896pt>
+File: ./images/results/chair/scene0138_00_119.jpg Graphic file (type jpg)
+<use ./images/results/chair/scene0138_00_119.jpg>
+Package pdftex.def Info: ./images/results/chair/scene0138_00_119.jpg  used on i
+nput line 182.
+(pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
+<./images/results/chair/scene0163_00_2083.jpg, id=543, 462.528pt x 346.896pt>
+File: ./images/results/chair/scene0163_00_2083.jpg Graphic file (type jpg)
+<use ./images/results/chair/scene0163_00_2083.jpg>
+Package pdftex.def Info: ./images/results/chair/scene0163_00_2083.jpg  used on 
+input line 185.
+(pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
+<./images/results/chair/scene0163_01_150.jpg, id=544, 462.528pt x 346.896pt>
+File: ./images/results/chair/scene0163_01_150.jpg Graphic file (type jpg)
+<use ./images/results/chair/scene0163_01_150.jpg>
+Package pdftex.def Info: ./images/results/chair/scene0163_01_150.jpg  used on i
+nput line 188.
+(pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
+<./images/results/chair/scene0181_02_516.jpg, id=545, 462.528pt x 346.896pt>
+File: ./images/results/chair/scene0181_02_516.jpg Graphic file (type jpg)
+<use ./images/results/chair/scene0181_02_516.jpg>
+Package pdftex.def Info: ./images/results/chair/scene0181_02_516.jpg  used on i
+nput line 191.
+(pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
+<./images/results/chair/scene0181_03_977.jpg, id=546, 462.528pt x 346.896pt>
+File: ./images/results/chair/scene0181_03_977.jpg Graphic file (type jpg)
+<use ./images/results/chair/scene0181_03_977.jpg>
+Package pdftex.def Info: ./images/results/chair/scene0181_03_977.jpg  used on i
+nput line 194.
+(pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
+<./images/results/chair/scene0204_00_9.jpg, id=547, 462.528pt x 346.896pt>
+File: ./images/results/chair/scene0204_00_9.jpg Graphic file (type jpg)
+<use ./images/results/chair/scene0204_00_9.jpg>
+Package pdftex.def Info: ./images/results/chair/scene0204_00_9.jpg  used on inp
+ut line 197.
+(pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
+<./images/results/chair/scene0249_00_1127.jpg, id=548, 462.528pt x 346.896pt>
+File: ./images/results/chair/scene0249_00_1127.jpg Graphic file (type jpg)
+<use ./images/results/chair/scene0249_00_1127.jpg>
+Package pdftex.def Info: ./images/results/chair/scene0249_00_1127.jpg  used on 
+input line 200.
+(pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./images/results/table/scene0061_01_1531.jpg, id=549, 462.528pt x 346.896pt>
+File: ./images/results/table/scene0061_01_1531.jpg Graphic file (type jpg)
+<use ./images/results/table/scene0061_01_1531.jpg>
+Package pdftex.def Info: ./images/results/table/scene0061_01_1531.jpg  used on 
+input line 209.
+(pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
+<./images/results/table/scene0072_01_516.jpg, id=550, 462.528pt x 346.896pt>
+File: ./images/results/table/scene0072_01_516.jpg Graphic file (type jpg)
+<use ./images/results/table/scene0072_01_516.jpg>
+Package pdftex.def Info: ./images/results/table/scene0072_01_516.jpg  used on i
+nput line 212.
+(pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
+<./images/results/table/scene0125_00_45.jpg, id=551, 462.528pt x 346.896pt>
+File: ./images/results/table/scene0125_00_45.jpg Graphic file (type jpg)
+<use ./images/results/table/scene0125_00_45.jpg>
+Package pdftex.def Info: ./images/results/table/scene0125_00_45.jpg  used on in
+put line 215.
+(pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
+<./images/results/table/scene0155_02_45.jpg, id=552, 462.528pt x 346.896pt>
+File: ./images/results/table/scene0155_02_45.jpg Graphic file (type jpg)
+<use ./images/results/table/scene0155_02_45.jpg>
+Package pdftex.def Info: ./images/results/table/scene0155_02_45.jpg  used on in
+put line 218.
+(pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
+<./images/results/table/scene0196_00_1405.jpg, id=553, 462.528pt x 346.896pt>
+File: ./images/results/table/scene0196_00_1405.jpg Graphic file (type jpg)
+<use ./images/results/table/scene0196_00_1405.jpg>
+Package pdftex.def Info: ./images/results/table/scene0196_00_1405.jpg  used on 
+input line 221.
+(pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
+<./images/results/table/scene0244_00_319.jpg, id=554, 462.528pt x 346.896pt>
+File: ./images/results/table/scene0244_00_319.jpg Graphic file (type jpg)
+<use ./images/results/table/scene0244_00_319.jpg>
+Package pdftex.def Info: ./images/results/table/scene0244_00_319.jpg  used on i
+nput line 224.
 (pdftex.def)             Requested size: 118.0827pt x 88.56052pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (./futurework.tex [29] [30 <./images/results/couch/scene0024_02_2776.jpg> <./
-images/results/couch/scene0025_00_516.jpg> <./images/results/couch/scene0025_01
-_516.jpg> <./images/results/couch/scene0199_00_762.jpg> <./images/results/couch
-/scene0031_00_877.jpg> <./images/results/couch/scene0031_00_1644.jpg> <./images
-/results/couch/scene0031_00_1900.jpg> <./images/results/couch/scene0199_00_1471
-.jpg> <./images/results/couch/scene0064_00_80.jpg> <./images/results/couch/scen
-e0031_01_565.jpg> <./images/results/couch/scene0031_01_2147.jpg> <./images/resu
-lts/couch/scene0031_02_1702.jpg> <./images/results/couch/scene0050_02_4364.jpg>
- <./images/results/couch/scene0054_00_1691.jpg> <./images/results/couch/scene02
-03_02_319.jpg>] [31 <./images/results/couch_gt_err/scene0203_02_941.jpg> <./ima
-ges/results/couch_gt_err/scene0203_01_774.jpg> <./images/results/couch_gt_err/s
-cene0031_00_2361.jpg> <./images/results/couch_gt_err/scene0031_01_1938.jpg> <./
-images/results/couch_gt_err/scene0049_00_192.jpg> <./images/results/couch_gt_er
-r/scene0064_00_319.jpg> <./images/results/couch_gt_err/scene0064_00_1022.jpg> <
-./images/results/couch_gt_err/scene0064_00_1090.jpg> <./images/results/couch_gt
-_err/scene0132_00_1133.jpg> <./images/results/couch_gt_err/scene0148_00_1090.jp
-g> <./images/results/couch_gt_err/scene0203_02_1938.jpg> <./images/results/couc
-h_gt_err/scene0031_02_2420.jpg>] [32 <./images/results/couch_err/scene0234_00_3
-68.jpg> <./images/results/couch_err/scene0031_02_1860.jpg> <./images/results/co
-uch_err/scene0050_01_993.jpg> <./images/results/couch_err/scene0064_00_981.jpg>
- <./images/results/couch_err/scene0141_02_618.jpg> <./images/results/couch_err/
-scene0148_00_565.jpg> <./images/results/couch_err/scene0148_00_893.jpg> <./imag
-es/results/couch_err/scene0203_00_503.jpg> <./images/results/couch_err/scene020
-3_00_608.jpg> <./images/results/couch_err/scene0203_00_1446.jpg> <./images/resu
-lts/couch_err/scene0203_02_336.jpg> <./images/results/couch_err/scene0203_02_19
-91.jpg>] [33
+) (./futurework.tex [32 <./images/results/couch_err/scene0234_00_368.jpg> <./im
+ages/results/couch_err/scene0031_02_1860.jpg> <./images/results/couch_err/scene
+0050_01_993.jpg> <./images/results/couch_err/scene0064_00_981.jpg> <./images/re
+sults/couch_err/scene0141_02_618.jpg> <./images/results/couch_err/scene0148_00_
+565.jpg> <./images/results/couch_err/scene0148_00_893.jpg> <./images/results/co
+uch_err/scene0203_00_503.jpg> <./images/results/couch_err/scene0203_00_608.jpg>
+ <./images/results/couch_err/scene0203_00_1446.jpg> <./images/results/couch_err
+/scene0203_02_336.jpg> <./images/results/couch_err/scene0203_02_1991.jpg>]
 
-]) [34] (./thesis.bbl
+LaTeX Warning: Text page 33 contains only floats.
+
+
+Overfull \vbox (5.76283pt too high) has occurred while \output is active []
+
+
+[33 <./images/results/chair/scene0005_01_1152.jpg> <./images/results/chair/scen
+e0006_00_691.jpg> <./images/results/chair/scene0006_02_2664.jpg> <./images/resu
+lts/chair/scene0030_00_336.jpg> <./images/results/chair/scene0030_02_364.jpg> <
+./images/results/chair/scene0041_01_243.jpg> <./images/results/chair/scene0045_
+01_1384.jpg> <./images/results/chair/scene0056_00_1932.jpg> <./images/results/c
+hair/scene0127_00_516.jpg> <./images/results/chair/scene0131_01_762.jpg> <./ima
+ges/results/chair/scene0131_01_877.jpg> <./images/results/chair/scene0138_00_11
+9.jpg> <./images/results/chair/scene0163_00_2083.jpg> <./images/results/chair/s
+cene0163_01_150.jpg> <./images/results/chair/scene0181_02_516.jpg> <./images/re
+sults/chair/scene0181_03_977.jpg> <./images/results/chair/scene0204_00_9.jpg> <
+./images/results/chair/scene0249_00_1127.jpg>] [34 <./images/results/table/scen
+e0061_01_1531.jpg> <./images/results/table/scene0072_01_516.jpg> <./images/resu
+lts/table/scene0125_00_45.jpg> <./images/results/table/scene0155_02_45.jpg> <./
+images/results/table/scene0196_00_1405.jpg> <./images/results/table/scene0244_0
+0_319.jpg>] [35
+
+]) [36] (./thesis.bbl
 bibitemlist
-[35
+[37
 
 
 ])
-<declaration-originality.pdf, id=548, 597.55246pt x 845.07718pt>
+<declaration-originality.pdf, id=586, 597.55246pt x 845.07718pt>
 File: declaration-originality.pdf Graphic file (type pdf)
 <use declaration-originality.pdf>
 Package pdftex.def Info: declaration-originality.pdf  used on input line 130.
@@ -2078,7 +2251,7 @@ File: declaration-originality.pdf Graphic file (type pdf)
 <use declaration-originality.pdf>
 Package pdftex.def Info: declaration-originality.pdf  used on input line 130.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
-<declaration-originality.pdf, id=551, page=1, 597.55246pt x 845.07718pt>
+<declaration-originality.pdf, id=589, page=1, 597.55246pt x 845.07718pt>
 File: declaration-originality.pdf Graphic file (type pdf)
 <use declaration-originality.pdf, page 1>
 Package pdftex.def Info: declaration-originality.pdf , page1 used on input line
@@ -2089,7 +2262,7 @@ File: declaration-originality.pdf Graphic file (type pdf)
 Package pdftex.def Info: declaration-originality.pdf , page1 used on input line
  130.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
- [36]
+ [38]
 File: declaration-originality.pdf Graphic file (type pdf)
 <use declaration-originality.pdf, page 1>
 Package pdftex.def Info: declaration-originality.pdf , page1 used on input line
@@ -2105,7 +2278,7 @@ File: declaration-originality.pdf Graphic file (type pdf)
 Package pdftex.def Info: declaration-originality.pdf , page1 used on input line
  130.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
- [37 <./declaration-originality.pdf>]
+ [39 <./declaration-originality.pdf>]
 \tf@thm=\write5
 \openout5 = `thesis.thm'.
 
@@ -2124,8 +2297,8 @@ Package rerunfilecheck Warning: File `thesis.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: 23288BC7CA2B9D536ED616F55E758901;2238
-(rerunfilecheck)             After:  F09D6665A8A7D9C9CCD04E78B2916E58;2238.
+(rerunfilecheck)             Before: E6EA3F4E8C2CCDF4FB8BA5A406DDDA2A;2238
+(rerunfilecheck)             After:  4B9A91FF1491C45AFCD8700AECB4EF17;2238.
 
 LaTeX Warning: There were undefined references.
 
@@ -2134,14 +2307,14 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 17057 strings out of 492649
- 261443 string characters out of 6129621
- 429729 words of memory out of 5000000
- 20360 multiletter control sequences out of 15000+600000
+ 17188 strings out of 492649
+ 266707 string characters out of 6129621
+ 430227 words of memory out of 5000000
+ 20459 multiletter control sequences out of 15000+600000
  37340 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,18n,122p,1690b,539s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{chapter*.30} has been referenced but does not exi
+pdfTeX warning (dest): name{chapter*.32} has been referenced but does not exi
 st, replaced by a fixed one
 
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
@@ -2160,10 +2333,10 @@ t/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/
 type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/u
 rw/palatino/uplr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/pala
 tino/uplri8a.pfb>
-Output written on thesis.pdf (43 pages, 7451425 bytes).
+Output written on thesis.pdf (45 pages, 9330872 bytes).
 PDF statistics:
- 684 PDF objects out of 1000 (max. 8388607)
- 505 compressed objects within 6 object streams
- 121 named destinations out of 1000 (max. 500000)
- 13069 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 721 PDF objects out of 1000 (max. 8388607)
+ 516 compressed objects within 6 object streams
+ 125 named destinations out of 1000 (max. 500000)
+ 13189 words of extra memory for PDF output out of 14400 (max. 10000000)
 

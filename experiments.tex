@@ -1,4 +1,9 @@
 \chapter{Experiments and Results}
+
+We did experiments on both synthetic data and real data. For synthetic data, the network can predict very well. For real data, we still have a lot of space for improvement. We will explain in more details in next chapter. However, we already achieve some good results on real data for single object camera pose detection. We get our training and testing data from 264 different scenes and in total 565 scans. Here are some results on Scannet Dataset.
+
+Our model performs very well on training data or data from the same scene. When test on new scenes, which the network has never seen in the training period, we also get some quite good predictions. Figure \ref{fig:result_couch} shows some examples of the good results we get on couch object in ScanNet test scenes. The red bounding boxes are the ground truth and the yellow bounding  boxes are the predicted 2D points locations. As we can see, our model is robust to occlusion and different sizes of the object. Sometimes our ground truth label is not accurate due to the reasons we have explained in last chapter, and the predictions can even fix the noise and make a better bounding box than our labels. For example our ground truth label may not be upright due to noises in camera pose or incomplete construction of the object model, and the predicted bounding box can be upright and fit the object better.
+
 \begin{figure}[h!]
   \centering
   \begin{subfigure}[b]{0.32\linewidth}
@@ -46,9 +51,11 @@
   \begin{subfigure}[b]{0.32\linewidth}
     \includegraphics[width=\linewidth]{results/couch/scene0203_02_319.jpg}
   \end{subfigure}
-  \caption{Result of testing on couch in ScanNet new scenes}
+  \caption{Examples of some good results of couch object in ScanNet test scenes}
   \label{fig:result_couch}
 \end{figure}
+
+Figure \ref{fig:result_couch_gt_err} shows some examples on different predictions with the ground truth, but they are not wrong. In this experiment, we try to filter out those images containing multiple same category objects. However, there are some noises maintain due to incomplete construction or objects in different sizes. As we mentioned before, we filter out those non-similar object model according to the difference of the size of its bounding box with our chosen 3D model. And when we choose images containing single target category object, we check that weather there are any other objects in the same category after filtering out similar objects. This means there may still be some other objects in the same category maintain in the image but with a different size i.e. out of the range of the threshold we set for bounding box size difference. Thus, when we test on these images, there may be other object predicted instead of the labeled one. As we can see, these predictions are not false, and should not contribute to our error measurements. Some of them predicts the other object in the image in the same category. Some of them try to fit in with a quite different shape which they have never seen during training period. And some of them may detected another category object but the appearance is very similar to our target object, which are sometimes even hard to distinguish for human beings. For example sometimes the network regards the pillow on the couch as the back of another small couch, which are quite reasonable predictions.
 
 \begin{figure}[h!]
   \centering
@@ -88,10 +95,11 @@
   \begin{subfigure}[b]{0.32\linewidth}
     \includegraphics[width=\linewidth]{results/couch_gt_err/scene0031_02_2420.jpg}
   \end{subfigure}
-  \caption{Result of testing on couch in ScanNet new scenes}
+  \caption{Examples of some reasonable results we of couch object in ScanNet test scenes}
   \label{fig:result_couch_gt_err}
 \end{figure}
 
+There are also a lot of failing cases. Figure \ref{fig:result_couch_err} shows these incorrect predictions. Consider the reasoning, there are less accuracy for predictions from the back of the couch. This is also reasonable for human beings, as it's a lack of important features when only the back of the couch is present in the image. The predictions are poorer for the objects having similar texture or color with the background, which is sometimes also difficult to distinguish in human eyes. The predictions are also poorer for the object containing different textures or colors itself. This may make the network partition the object and predict only part of the object. For example, the network has never seen a couch having different colors in its back, or couch with no back in some part, and the model only predict a part of the couch which contains  a back and consists of only one color/texture. And finally, those object in quite special shapes that the network has never seen during training result in poor predictions. Of course our training data size is not big enough. By enlarging the size of the training dataset, our model  may generalize better to more different shapes of the objects in the same category.
 
 \begin{figure}[h!]
   \centering
@@ -131,6 +139,90 @@
   \begin{subfigure}[b]{0.32\linewidth}
     \includegraphics[width=\linewidth]{results/couch_err/scene0203_02_1991.jpg}
   \end{subfigure}
-  \caption{Result of testing on couch in ScanNet new scenes}
-  \label{fig:result_couch_gt_err}
+  \caption{Examples of some failing results of couch object in ScanNet test scenes}
+  \label{fig:result_couch_err}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{results/chair/scene0005_01_1152.jpg}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{results/chair/scene0006_00_691.jpg}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{results/chair/scene0006_02_2664.jpg}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{results/chair/scene0030_00_336.jpg}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{results/chair/scene0030_02_364.jpg}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{results/chair/scene0041_01_243.jpg}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{results/chair/scene0045_01_1384.jpg}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{results/chair/scene0056_00_1932.jpg}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{results/chair/scene0127_00_516.jpg}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{results/chair/scene0131_01_762.jpg}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{results/chair/scene0131_01_877.jpg}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{results/chair/scene0138_00_119.jpg}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{results/chair/scene0163_00_2083.jpg}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{results/chair/scene0163_01_150.jpg}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{results/chair/scene0181_02_516.jpg}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{results/chair/scene0181_03_977.jpg}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{results/chair/scene0204_00_9.jpg}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{results/chair/scene0249_00_1127.jpg}
+  \end{subfigure}
+  \caption{Examples of the some good results of chair object in ScanNet test scenes}
+  \label{fig:result_chair}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{results/table/scene0061_01_1531.jpg}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{results/table/scene0072_01_516.jpg}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{results/table/scene0125_00_45.jpg}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{results/table/scene0155_02_45.jpg}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{results/table/scene0196_00_1405.jpg}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{results/table/scene0244_00_319.jpg}
+  \end{subfigure}
+  \caption{Examples of the some good results of table object in ScanNet test scenes}
+  \label{fig:result_table}
 \end{figure}
