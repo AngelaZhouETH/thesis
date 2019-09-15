@@ -6,6 +6,8 @@ There are a lot of limitations on our current work and a lot of potential work i
 
 Since our model learns to predict 2D projections of 3D bounding box from limited training data, sometimes it cannot generalize well to objects in new or unusually perspective of views. For example, in our testing data for couch, the result of predicting from back of the couch is not as good as the prediction from the front view.
 
+As we discussed in previous chapter, our loss function does not consider rotation invariant cases. For example, a rectangle table does not have a unique front side. The object looks exactly the same after rotating 180 degrees in xy plane. Thus, the predicted bounding box can be correct assuming either side as the front side. Moreover, if the table is square, the four sides are equal, and each one can be considered as the front side. However, our loss function corresponds each point with its ground truth coordinates, and didn't consider the rotation invariant case. To this end, we should allow the predicted bounding box to rotate in xy plane and set the loss as the minimum loss it ever gets for rotation invariant objects. However, for a round table , we still cannot minimize the loss to zero, as otherwise it will be too much computation overheard.
+
 Our loss function also does not distinguish the error of predicted 2D points and ground truth in small 3D bounding box versus large 3D bounding box. A small error in a large box is generally negligible but the same error in a small box has a much greater effect on the result or IOU. Thus, further improvement on the loss function is possible.
 
 \section{Datasets}

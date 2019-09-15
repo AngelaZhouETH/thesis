@@ -88,7 +88,7 @@ Then we did experiments on the whole synthetic image. We use SunCG toolbox to re
   \begin{subfigure}[b]{0.32\linewidth}
     \includegraphics[width=\linewidth]{results/suncg/000096_color.jpg}
   \end{subfigure}
-  \caption{Examples of results of sofa object in SunCG test dataset}
+  \caption{Examples of results for sofa objects in SunCG test dataset}
   \label{fig:suncg}
 \end{figure}
 
@@ -145,7 +145,7 @@ Our model performs very well on training data or data from the same scene. When 
   \begin{subfigure}[b]{0.32\linewidth}
     \includegraphics[width=\linewidth]{results/couch/scene0203_02_319.jpg}
   \end{subfigure}
-  \caption{Examples of some good results of couch object in ScanNet test scenes}
+  \caption{Examples of some good results for couch objects in ScanNet test scenes}
   \label{fig:result_couch}
 \end{figure}
 
@@ -189,11 +189,11 @@ Figure \ref{fig:result_couch_gt_err} shows some examples on different prediction
   \begin{subfigure}[b]{0.32\linewidth}
     \includegraphics[width=\linewidth]{results/couch_gt_err/scene0031_02_2420.jpg}
   \end{subfigure}
-  \caption{Examples of some reasonable results we of couch object in ScanNet test scenes}
+  \caption{Examples of some reasonable results for couch objects in ScanNet test scenes}
   \label{fig:result_couch_gt_err}
 \end{figure}
 
-There are also a lot of failed cases. Figure \ref{fig:result_couch_err} shows these incorrect predictions. Consider the reasoning, there are less accuracy for predictions from the back of the couch. This is also reasonable for human beings, as it's a lack of important features when only the back of the couch is present in the image. The predictions are poorer for the objects having similar texture or color with the background, which is sometimes also difficult to distinguish in human eyes. The predictions are also poorer for the object containing different textures or colors itself. This may make the network partition the object and predict only part of the object. For example, the network has never seen a couch having different colors in its back, or couch with no back in some part, and the model only predict a part of the couch which contains  a back and consists of only one color/texture. And finally, those object in quite special shapes that the network has never seen during training result in poor predictions. Of course our training data size is not big enough. By enlarging the size of the training dataset, our model  may generalize better to more different shapes of the objects in the same category.
+There are also a lot of failed cases. Figure \ref{fig:result_couch_err} shows these incorrect predictions. Consider the reasoning, there are less accuracy for predictions from the back of the couch. This is also reasonable for human beings, as it's a lack of important features when only the back of the couch is present in the image. The predictions are poorer for the objects having similar texture or color with the background, which is sometimes also difficult to distinguish in human eyes. The predictions are also poorer for the object containing different textures or colors itself. This may make the network partition the object and predict only part of the object. For example, the network has never seen a couch having different colors in its back, or couch with no back in some part, and the model only predict a part of the couch which contains  a back and consists of only one color/texture. And finally, those object in quite special shapes that the network has never seen during training result in poor predictions. Of course our training data size is not large enough. By enlarging the size of the training dataset, our model  may generalize better to more objects of different shapes in the same category.
 
 \begin{figure}[h!]
   \centering
@@ -233,8 +233,32 @@ There are also a lot of failed cases. Figure \ref{fig:result_couch_err} shows th
   \begin{subfigure}[b]{0.32\linewidth}
     \includegraphics[width=\linewidth]{results/couch_err/scene0203_02_1991.jpg}
   \end{subfigure}
-  \caption{Examples of some failed results of couch object in ScanNet test scenes}
+  \caption{Examples of some failed results for couch objects in ScanNet test scenes}
   \label{fig:result_couch_err}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{results/table/scene0061_01_1531.jpg}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{results/table/scene0072_01_516.jpg}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{results/table/scene0125_00_45.jpg}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{results/table/scene0155_02_45.jpg}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{results/table/scene0196_00_1405.jpg}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{results/table/scene0244_00_319.jpg}
+  \end{subfigure}
+  \caption{Examples of the some good results for table objects in ScanNet test scenes}
+  \label{fig:result_table}
 \end{figure}
 
 \begin{figure}[h!]
@@ -293,30 +317,10 @@ There are also a lot of failed cases. Figure \ref{fig:result_couch_err} shows th
   \begin{subfigure}[b]{0.32\linewidth}
     \includegraphics[width=\linewidth]{results/chair/scene0249_00_1127.jpg}
   \end{subfigure}
-  \caption{Examples of the some good results of chair object in ScanNet test scenes}
+  \caption{Examples of the some good results for chair objects in ScanNet test scenes}
   \label{fig:result_chair}
 \end{figure}
 
-\begin{figure}[h!]
-  \centering
-  \begin{subfigure}[b]{0.32\linewidth}
-    \includegraphics[width=\linewidth]{results/table/scene0061_01_1531.jpg}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.32\linewidth}
-    \includegraphics[width=\linewidth]{results/table/scene0072_01_516.jpg}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.32\linewidth}
-    \includegraphics[width=\linewidth]{results/table/scene0125_00_45.jpg}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.32\linewidth}
-    \includegraphics[width=\linewidth]{results/table/scene0155_02_45.jpg}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.32\linewidth}
-    \includegraphics[width=\linewidth]{results/table/scene0196_00_1405.jpg}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.32\linewidth}
-    \includegraphics[width=\linewidth]{results/table/scene0244_00_319.jpg}
-  \end{subfigure}
-  \caption{Examples of the some good results of table object in ScanNet test scenes}
-  \label{fig:result_table}
-\end{figure}
+For table objects, we do not get much good predictions. The tables in the dataset are in a huge variety of shapes and styles, which makes the learning a difficult task. A main problem of table objects is that tables are also usually rotation invariant, i.e. a rectangle table is exactly the same after rotating 180 degrees in xy plane, and a square table is rotation invariant for every 90 degrees. A round table may even be rotation invariant in any angle of rotation in xy plane. However, our loss function calculates loss for every corresponding points between prediction and ground truth and didn't deal with this rotation variant case. Thus, there is a problem on our loss function, and we will discuss this further in next chapter.
+
+We also have some good results for chairs. Some examples of good results are shown in Figure \ref{fig:result_chair}. The main constraint is that in most of the cases chairs are occluded by the table over it or are occupied by lots of things on it. These reasons pull down the accuracy.
